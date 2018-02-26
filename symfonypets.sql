@@ -65,7 +65,7 @@ ALTER TABLE `tasques`
 -- AUTO_INCREMENT de la tabla `tasques`
 --
 ALTER TABLE `tasques`
-  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
+  MODIFY `id_tasca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
 COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
@@ -137,7 +137,7 @@ CREATE TABLE `usuaris` (
 -- Volcado de datos para la tabla `usuaris`
 --
 
-INSERT INTO `tasques` (`id_usuari`, `nom`, `cognoms`, `email`, `perfil`) VALUES
+INSERT INTO `usuaris` (`id_usuari`, `nom`, `cognoms`, `email`, `perfil`) VALUES
 (1, 'Victor', 'Auyanet', 'victor@symfonypets.com', 'superadministrador'),
 (2, 'Judit', 'Moya', 'judit@symfonypets.com', 'superadministrador');
 
