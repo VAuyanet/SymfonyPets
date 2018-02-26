@@ -1,0 +1,3 @@
+pets_web_homepage:
+    path:     /
+    defaults: { _controller: petsWebBundle:Default:index }
