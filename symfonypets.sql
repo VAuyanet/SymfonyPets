@@ -103,7 +103,7 @@ INSERT INTO `subtasques` (`id_subtasca`, `id_tasca`, `titol`, `descripcio`, `dat
 -- Indices de la tabla `subtasques`
 --
 ALTER TABLE `subtasques`
-  ADD PRIMARY KEY (`id_subtasca`);
+  ADD PRIMARY KEY (`id_subtasca`),
   ADD FOREIGN KEY (`id_tasca`) REFERENCES `tasques`(`id_tasca`);
 
 --
@@ -114,8 +114,7 @@ ALTER TABLE `subtasques`
 -- AUTO_INCREMENT de la tabla `subtasques`
 --
 ALTER TABLE `subtasques`
-  MODIFY `id_subtasca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=18;
-COMMIT;
+  MODIFY `id_subtasca` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
@@ -131,7 +130,7 @@ CREATE TABLE `usuaris` (
   `nom` text COLLATE utf8_spanish2_ci NOT NULL,
   `cognoms` text COLLATE utf8_spanish2_ci NOT NULL,
   `email` text COLLATE utf8_spanish2_ci NOT NULL,
-  `perfil` text COLLATE utf8_spanish2_ci NOT NULL,
+  `perfil` text COLLATE utf8_spanish2_ci NOT NULL
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8 COLLATE=utf8_spanish2_ci;
 
 --
@@ -161,7 +160,6 @@ ALTER TABLE `usuaris`
 --
 ALTER TABLE `usuaris`
   MODIFY `id_usuari` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=3;
-COMMIT;
 
 /*!40101 SET CHARACTER_SET_CLIENT=@OLD_CHARACTER_SET_CLIENT */;
 /*!40101 SET CHARACTER_SET_RESULTS=@OLD_CHARACTER_SET_RESULTS */;
