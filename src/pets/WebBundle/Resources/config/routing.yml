@@ -2,5 +2,5 @@ pets_web_homepage:
     path:     /
     defaults: { _controller: petsWebBundle:Default:index }
 pets_web_form:
-    path:     /formUsuauris
+    path:     /formUsuaris
     defaults: { _controller: petsWebBundle:Forms:create }
