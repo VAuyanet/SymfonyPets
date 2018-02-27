@@ -1,0 +1,54 @@
+<?php
+
+namespace pets\WebBundle\Entity;
+
+use Doctrine\ORM\Mapping as ORM;
+
+/**
+ * Usuaris
+ *
+ * @ORM\Table(name="usuaris")
+ * @ORM\Entity
+ */
+class Usuaris
+{
+    /**
+     * @var integer
+     *
+     * @ORM\Column(name="id_usuari", type="integer", nullable=false)
+     * @ORM\Id
+     * @ORM\GeneratedValue(strategy="IDENTITY")
+     */
+    private $idUsuari;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
+     */
+    private $nom;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="cognoms", type="text", length=65535, nullable=false)
+     */
+    private $cognoms;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="email", type="text", length=65535, nullable=false)
+     */
+    private $email;
+
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
+     */
+    private $perfil;
+
+
+}
+
