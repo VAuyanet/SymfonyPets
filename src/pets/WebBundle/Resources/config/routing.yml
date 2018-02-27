@@ -4,3 +4,9 @@ pets_web_homepage:
 pets_web_form:
     path:     /formUsuaris
     defaults: { _controller: petsWebBundle:Forms:create }
+pets_web_form:
+    path:     /formTasques
+    defaults: { _controller: petsWebBundle:Forms:create }
+pets_web_form:
+    path:     /formSubtasques
+    defaults: { _controller: petsWebBundle:Forms:create }

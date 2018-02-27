@@ -5,7 +5,10 @@
     <title>Document</title>
 </head>
 <body>
+   {{form_start(form, {'action':'', 'method':'POST'})}}
     <h1>{{ titol }}</h1>
-    {{ form }}
+    {#{{ form }}#}
+    
+    {{form_end(form)}}
 </body>
 </html>
