@@ -8,6 +8,12 @@ class DefaultController extends Controller
 {
     public function createAction()
     {
-        return $this->render('petsWebBundle:FormUsuaris:formUsuaris.html.twig');
+        $titol = "Form usuaris"; 
+        $usuari = new Usuari(); 
+        $form = $this->createForm(UsuarisType::class, $usuari); 
+        return $this->render('petsWebBundle:Forms:formUsuaris.html.twig', array( 'titol' => $titol, 'form' =>$form->createView() ));
     }
 }
+
+
+
