@@ -1,3 +1,6 @@
 pets_web_homepage:
     path:     /
     defaults: { _controller: petsWebBundle:Default:index }
+pets_web_form:
+    path:     /formUsers
+    defaults: { _controller: petsWebBundle:Formulari:create }

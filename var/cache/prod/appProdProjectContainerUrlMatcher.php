@@ -30,6 +30,34 @@ class appProdProjectContainerUrlMatcher extends Symfony\Bundle\FrameworkBundle\R
         }
 
 
+        // pets_web_homepage
+        if ('' === $trimmedPathinfo) {
+            $ret = array (  '_controller' => 'pets\\WebBundle\\Controller\\DefaultController::indexAction',  '_route' => 'pets_web_homepage',);
+            if (substr($pathinfo, -1) !== '/') {
+                return array_replace($ret, $this->redirect($rawPathinfo.'/', 'pets_web_homepage'));
+            }
+
+            return $ret;
+        }
+
+        // vallbona_web_homepage
+        if ('/public-web/home' === $pathinfo) {
+            return array (  '_controller' => 'Vallbona\\WebBundle\\Controller\\DefaultController::indexAction',  '_route' => 'vallbona_web_homepage',);
+        }
+
+        if (0 === strpos($pathinfo, '/public-web/articles')) {
+            // vallbona_web_articles
+            if ('/public-web/articles' === $pathinfo) {
+                return array (  '_controller' => 'Vallbona\\WebBundle\\Controller\\DefaultController::articlesAction',  '_route' => 'vallbona_web_articles',);
+            }
+
+            // vallbona_web_articlesDetall
+            if (preg_match('#^/public\\-web/articles/(?P<id>[^/]++)$#s', $pathinfo, $matches)) {
+                return $this->mergeDefaults(array_replace($matches, array('_route' => 'vallbona_web_articlesDetall')), array (  '_controller' => 'Vallbona\\WebBundle\\Controller\\DefaultController::articlesDetallAction',));
+            }
+
+        }
+
         // homepage
         if ('' === $trimmedPathinfo) {
             $ret = array (  '_controller' => 'AppBundle\\Controller\\DefaultController::indexAction',  '_route' => 'homepage',);

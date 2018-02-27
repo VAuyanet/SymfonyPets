@@ -5,7 +5,12 @@ namespace pets\WebBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
-
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
+//TextType, TextareaType, SubmitType, etc. 
 class UsuarisType extends AbstractType
 {
     /**
@@ -13,7 +18,7 @@ class UsuarisType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom')->add('cognoms')->add('email')->add('perfil');
+        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('Enviar', SubmitType::class);       
     }/**
      * {@inheritdoc}
      */
