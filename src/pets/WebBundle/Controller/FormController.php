@@ -4,7 +4,7 @@ namespace pets\WebBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 
-class DefaultController extends Controller
+class FormController extends Controller
 {
     public function createAction()
     {
