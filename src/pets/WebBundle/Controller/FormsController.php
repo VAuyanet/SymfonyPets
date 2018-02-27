@@ -3,7 +3,8 @@
 namespace pets\WebBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
-use Symfony\Bundle\FrameworkBundle\Entity\Usuaris;
+use pets\WebBundle\Form\UsuarisType;
+use pets\WebBundle\Entity\Usuaris;
 
 class FormsController extends Controller
 {
