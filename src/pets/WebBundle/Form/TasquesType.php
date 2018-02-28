@@ -5,6 +5,11 @@ namespace pets\WebBundle\Form;
 use Symfony\Component\Form\AbstractType;
 use Symfony\Component\Form\FormBuilderInterface;
 use Symfony\Component\OptionsResolver\OptionsResolver;
+use Symfony\Component\Form\Extension\Core\Type\TextType;
+use Symfony\Component\Form\Extension\Core\Type\TextareaType;
+use Symfony\Component\Form\Extension\Core\Type\SubmitType;
+use Symfony\Component\Form\Extension\Core\Type\DateType;
+use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
 class TasquesType extends AbstractType
 {
@@ -13,7 +18,7 @@ class TasquesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('prioritat')->add('departament');
+        $builder->add('titol', TextType::class)->add('descripcio', TextType::class)->add('data_inici', DateType::class)->add('data_final', DateType::class)->add('estat', TextType::class)->add('prioritat', TextType::class)->add('departament', TextType::class)->add('Enviar', SubmitType::class);      
     }/**
      * {@inheritdoc}
      */

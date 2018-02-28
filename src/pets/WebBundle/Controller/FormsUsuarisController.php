@@ -5,10 +5,11 @@ namespace pets\WebBundle\Controller;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use pets\WebBundle\Form\UsuarisType;
 use pets\WebBundle\Entity\Usuaris;
+use Symfony\Component\HttpFoundation\Request;
 
 class FormsUsuarisController extends Controller
 {
-    public function createAction()
+    public function createAction(Request $request)
     {
         $titol = "Form usuaris";
         $usuari = new Usuaris(); 

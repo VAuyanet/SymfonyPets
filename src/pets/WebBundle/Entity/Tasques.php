@@ -27,9 +27,10 @@ class Tasques
      * @var string
      *
      * @ORM\Column(name="titol", type="text", length=65535, nullable=false)
-     */
-    /**
-     * @Assert\NotBlank()
+     * @Assert\Length(
+     * min=2,
+     * minMessage = "El titol ha de ser de com a minim {{ limit }} caracters"
+     * )
      */
     private $titol;
 
@@ -38,18 +39,12 @@ class Tasques
      *
      * @ORM\Column(name="descripcio", type="text", length=65535, nullable=false)
      */
-    /**
-     * @Assert\NotBlank()
-     */
     private $descripcio;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="data_inici", type="date", nullable=false)
-     */
-    /**
-     * @Assert\NotBlank()
      */
     private $dataInici;
 
@@ -58,18 +53,12 @@ class Tasques
      *
      * @ORM\Column(name="data_final", type="date", nullable=false)
      */
-    /**
-     * @Assert\NotBlank()
-     */
     private $dataFinal;
 
     /**
      * @var string
      *
      * @ORM\Column(name="estat", type="text", length=65535, nullable=false)
-     */
-    /**
-     * @Assert\NotBlank()
      */
     private $estat;
 
