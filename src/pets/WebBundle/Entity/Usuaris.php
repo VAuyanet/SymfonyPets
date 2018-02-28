@@ -3,7 +3,7 @@
 namespace pets\WebBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
-
+use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Usuaris
  *
@@ -25,6 +25,10 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
+     * @Assert\Length(
+     * min=2,
+     * minMessage = "Your first name must be at least {{ limit }} characters long"
+     * )
      */
     private $nom;
 

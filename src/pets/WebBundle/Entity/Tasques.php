@@ -3,6 +3,7 @@
 namespace pets\WebBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
+use Symfony\Component\Validator\Constraints as Assert;
 
 /**
  * Tasques
@@ -19,12 +20,16 @@ class Tasques
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */
+
     private $idTasca;
 
     /**
      * @var string
      *
      * @ORM\Column(name="titol", type="text", length=65535, nullable=false)
+     */
+    /**
+     * @Assert\NotBlank()
      */
     private $titol;
 
@@ -33,12 +38,18 @@ class Tasques
      *
      * @ORM\Column(name="descripcio", type="text", length=65535, nullable=false)
      */
+    /**
+     * @Assert\NotBlank()
+     */
     private $descripcio;
 
     /**
      * @var \DateTime
      *
      * @ORM\Column(name="data_inici", type="date", nullable=false)
+     */
+    /**
+     * @Assert\NotBlank()
      */
     private $dataInici;
 
@@ -47,12 +58,18 @@ class Tasques
      *
      * @ORM\Column(name="data_final", type="date", nullable=false)
      */
+    /**
+     * @Assert\NotBlank()
+     */
     private $dataFinal;
 
     /**
      * @var string
      *
      * @ORM\Column(name="estat", type="text", length=65535, nullable=false)
+     */
+    /**
+     * @Assert\NotBlank()
      */
     private $estat;
 
