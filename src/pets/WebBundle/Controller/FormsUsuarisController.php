@@ -10,7 +10,7 @@ class FormsUsuarisController extends Controller
 {
     public function createAction()
     {
-        $titol = "Form usuaris"; 
+        $titol = "Form usuaris";
         $usuari = new Usuaris(); 
         $form = $this->createForm(UsuarisType::class, $usuari); 
         return $this->render('petsWebBundle:Forms:formUsuaris.html.twig', array( 'titol' => $titol, 'form' =>$form->createView() ));
