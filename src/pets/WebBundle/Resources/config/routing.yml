@@ -1,12 +1,12 @@
 pets_web_homepage:
     path:     /
     defaults: { _controller: petsWebBundle:Default:index }
-pets_web_form:
+pets_web_formUsuaris:
     path:     /formUsuaris
-    defaults: { _controller: petsWebBundle:Forms:create }
-pets_web_form:
+    defaults: { _controller: petsWebBundle:FormsUsuaris:create }
+pets_web_formTasques:
     path:     /formTasques
-    defaults: { _controller: petsWebBundle:Forms:create }
-pets_web_form:
+    defaults: { _controller: petsWebBundle:FormsTasques:create }
+pets_web_formSubtasques:
     path:     /formSubtasques
-    defaults: { _controller: petsWebBundle:Forms:create }
+    defaults: { _controller: petsWebBundle:FormsSubtasques:create }
