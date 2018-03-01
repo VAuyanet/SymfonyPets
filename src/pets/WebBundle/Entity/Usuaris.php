@@ -26,8 +26,10 @@ class Usuaris
      *
      * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
      * @Assert\Length(
-     * min=2,
-     * minMessage = "Your first name must be at least {{ limit }} characters long"
+     * min=5,
+     * max=10,
+     * minMessage = "Your first name must be at least {{ limit }} characters long",
+     * maxMessage = "Your first name must be max {{ limit }} characters long"
      * )
      */
     private $nom;
@@ -36,6 +38,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="cognoms", type="text", length=65535, nullable=false)
+     * 
      */
     private $cognoms;
 
@@ -50,6 +53,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
+     *
      */
     private $perfil;
     
@@ -57,13 +61,18 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="password", type="text", length=65535, nullable=false)
-     */
+     * @Assert\NotBlank()
+     * @Assert\Choice(
+     *     choices = { "admin", "treballador", "booking" },
+     *     message = "Nomes pots assignar el rol de admin, treballador o booking"
+     * )     */
     private $password;
     
     /**
      * @var string
      *
      * @ORM\Column(name="departament", type="text", length=65535, nullable=false)
+     * 
      */
     private $departament;
 
