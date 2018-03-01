@@ -6,7 +6,10 @@ pets_web_formUsuaris:
     defaults: { _controller: petsWebBundle:FormsUsuaris:create }
 pets_web_formTasques:
     path:     /formTasques
-    defaults: { _controller: petsWebBundle:FormsTasques:create }
+    defaults: { _controller: petsWebBundle:FormsTasques:createTasques }
+pets_web_formTasques:
+    path:     /formTasques
+    defaults: { _controller: petsWebBundle:FormsTasques:searchTasques }
 pets_web_formSubtasques:
     path:     /formSubtasques
     defaults: { _controller: petsWebBundle:FormsSubtasques:create }
