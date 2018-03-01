@@ -18,7 +18,7 @@ class UsuarisType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('Enviar', SubmitType::class);       
+        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('password', TextType::class)->add('departament', TextType::class)->add('Enviar', SubmitType::class);       
     }/**
      * {@inheritdoc}
      */

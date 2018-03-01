@@ -52,6 +52,20 @@ class Usuaris
      * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
      */
     private $perfil;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="password", type="text", length=65535, nullable=false)
+     */
+    private $password;
+    
+    /**
+     * @var string
+     *
+     * @ORM\Column(name="departament", type="text", length=65535, nullable=false)
+     */
+    private $departament;
 
 
 
@@ -159,5 +173,53 @@ class Usuaris
     public function getPerfil()
     {
         return $this->perfil;
+    }
+    
+    /**
+     * Set password
+     *
+     * @param string $perfil
+     *
+     * @return Usuaris
+     */
+    public function setPassword($password)
+    {
+        $this->password = $password;
+
+        return $this;
+    }
+
+    /**
+     * Get password
+     *
+     * @return string
+     */
+    public function getPassword()
+    {
+        return $this->password;
+    }
+    
+     /**
+     * Set departament
+     *
+     * @param string $departament
+     *
+     * @return Usuaris
+     */
+    public function setDepartament($departament)
+    {
+        $this->departament = $departament;
+
+        return $this;
+    }
+
+    /**
+     * Get departament
+     *
+     * @return string
+     */
+    public function getDepartament()
+    {
+        return $this->departament;
     }
 }
