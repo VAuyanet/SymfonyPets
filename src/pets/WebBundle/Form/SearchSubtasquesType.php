@@ -11,14 +11,14 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 
-class SubtasquesType extends AbstractType
+class SearchSubtasquesType extends AbstractType
 {
     /**
      * {@inheritdoc}
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titol', TextType::class)->add('descripcio', TextType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('usuaris', TextType::class)->add('idTasca', TextType::class)->add('Enviar', SubmitType::class);
+        $builder->add('id_subtasca', TextType::class)->add('Enviar', SubmitType::class);    
     }/**
      * {@inheritdoc}
      */

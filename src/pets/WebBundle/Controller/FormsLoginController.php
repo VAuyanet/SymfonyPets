@@ -44,7 +44,8 @@ class FormsLoginController extends Controller
                  $estat = "Usuari no trobat";
              }
             
-        
+        $form = $this->createForm(LoginType::class, $usuari);
+
         }
         return $this->render('petsWebBundle:Forms:formLogin.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
         

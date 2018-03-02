@@ -4,6 +4,7 @@ namespace pets\WebBundle\Controller;
 
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
 use pets\WebBundle\Form\TasquesType;
+use pets\WebBundle\Form\SearchTasquesType;
 use pets\WebBundle\Entity\Tasques;
 use Symfony\Component\HttpFoundation\Request;
 
@@ -17,7 +18,7 @@ class FormsTasquesController extends Controller
 
         $form->handleRequest($request);
         if($form->isValid()){
-            $titolForm = "Form tasques";
+            $titolForm = "Form Create Tasques";
             $status = "Formulari vàlid";
             $data = array(
             'titol' => $form->get('titol')->getData(),
@@ -65,21 +66,15 @@ class FormsTasquesController extends Controller
     public function searchTasquesAction(Request $request)
     {
         $tasca = new Tasques(); 
-        $form = $this->createForm(TasquesType::class, $tasca); 
+        $form = $this->createForm(SearchTasquesType::class, $tasca); 
         
 
         $form->handleRequest($request);
         if($form->isValid()){
-            $titolForm = "Form tasques";
+            $titolForm = "Form Search Tasques";
             $status = "Formulari vàlid";
             $data = array(
-            'titol' => $form->get('titol')->getData(),
-            'descripcio' => $form->get('descripcio')->getData(),
-            'data_inici' => $form->get('data_inici')->getData(),
-            'data_final' => $form->get('data_final')->getData(),
-            'estat' => $form->get('estat')->getData(),
-            'prioritat' => $form->get('prioritat')->getData(),
-            'departament' => $form->get('departament')->getData(),
+            'id_tasca' => $form->get('id_tasca')->getData(),
                 );
         } else{
             $titolForm = null;
@@ -104,7 +99,7 @@ class FormsTasquesController extends Controller
             
         
         }
-        return $this->render('petsWebBundle:Forms:formTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
+        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
         
     }
     

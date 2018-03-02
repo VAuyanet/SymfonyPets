@@ -4,15 +4,18 @@ pets_web_homepage:
 pets_web_formUsuaris:
     path:     /formUsuaris
     defaults: { _controller: petsWebBundle:FormsUsuaris:create }
+pets_web_formLogin:
+    path:     /formLogin
+    defaults: { _controller: petsWebBundle:FormsLogin:searchLogin }
 pets_web_formTasquesCreate:
     path:     /formTasques
     defaults: { _controller: petsWebBundle:FormsTasques:createTasques }
 pets_web_formTasquesSearch:
-    path:     /formTasques
+    path:     /formSearchTasques
     defaults: { _controller: petsWebBundle:FormsTasques:searchTasques }
-pets_web_formSubtasques:
+pets_web_formSubtasquesCreate:
     path:     /formSubtasques
-    defaults: { _controller: petsWebBundle:FormsSubtasques:create }
-pets_web_formLogin:
-    path:     /formLogin
-    defaults: { _controller: petsWebBundle:FormsLogin:searchLogin }
+    defaults: { _controller: petsWebBundle:FormsSubtasques:createSubtasques }
+pets_web_formSubtasquesSearch:
+    path:     /formSearchSubtasques
+    defaults: { _controller: petsWebBundle:FormsSubtasques:searchSubtasques }

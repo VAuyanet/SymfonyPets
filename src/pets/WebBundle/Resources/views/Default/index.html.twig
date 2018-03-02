@@ -3,11 +3,14 @@
 <head>
     <meta charset="UTF-8">
     <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="global.css">
 </head>
 <body>
-    <a href="/Symfony/SymfonyPets/web/app_dev.php/formLogin">Form Login</a><br/>
-    <a href="/Symfony/SymfonyPets/web/app_dev.php/formTasques">Form Tasques</a><br/>
-    <a href="/Symfony/SymfonyPets/web/app_dev.php/formSubtasques">Form Subtasques</a><br/>
-    <a href="/Symfony/SymfonyPets/web/app_dev.php/formUsuaris">Form Registre usuari</a><br/>
+    <a href="{{ path('pets_web_formLogin') }}">Form Login</a><br/>
+    <a href="{{ path('pets_web_formTasquesCreate') }}">Form Create Tasques</a><br/>
+    <a href="{{ path('pets_web_formTasquesSearch') }}">Form Search Tasques</a><br/>
+    <a href="{{ path('pets_web_formSubtasquesCreate') }}">Form Create Subtasques</a><br/>
+    <a href="{{ path('pets_web_formSubtasquesSearch') }}">Form Search Subtasques</a><br/>
+    <a href="{{ path('pets_web_formUsuaris') }}">Form Registre usuari</a><br/>
 </body>
 </html>
