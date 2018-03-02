@@ -25,12 +25,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
-     * @Assert\Length(
-     * min=5,
-     * max=10,
-     * minMessage = "Your first name must be at least {{ limit }} characters long",
-     * maxMessage = "Your first name must be max {{ limit }} characters long"
-     * )
+     * @Assert\NotBlank()
      */
     private $nom;
 
@@ -38,7 +33,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="cognoms", type="text", length=65535, nullable=false)
-     * 
+     * @Assert\NotBlank()
      */
     private $cognoms;
 
@@ -46,6 +41,10 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="email", type="text", length=65535, nullable=false)
+     * @Assert\Email(
+     *     message = "El e-mail '{{ value }}' no es valid",
+     *     checkMX = true
+     * )
      */
     private $email;
 
@@ -53,7 +52,11 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
-     *
+     * @Assert\NotBlank()
+     * @Assert\Choice(
+     *     choices = { "admin", "treballador", "booking" },
+     *     message = "Nomes pots assignar el rol de admin, treballador o booking"
+     * )
      */
     private $perfil;
     
@@ -61,11 +64,8 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="password", type="text", length=65535, nullable=false)
-     * @Assert\NotBlank()
-     * @Assert\Choice(
-     *     choices = { "admin", "treballador", "booking" },
-     *     message = "Nomes pots assignar el rol de admin, treballador o booking"
-     * )     */
+     * @Assert\NotBlank()     
+     */
     private $password;
     
     /**

@@ -38,6 +38,12 @@ class Tasques
      * @var string
      *
      * @ORM\Column(name="descripcio", type="text", length=65535, nullable=false)
+     * @Assert\Length(
+     * min=5,
+     * minMessage = "El titol ha de ser de com a minim {{ limit }} caracters"
+     * max=240,
+     * maxMessage = "El titol ha de ser de com a maxim {{ limit }} caracters"
+     * )
      */
     private $descripcio;
 
@@ -45,6 +51,7 @@ class Tasques
      * @var \DateTime
      *
      * @ORM\Column(name="data_inici", type="date", nullable=false)
+     * @Assert\NotBlank()
      */
     private $dataInici;
 
@@ -52,6 +59,7 @@ class Tasques
      * @var \DateTime
      *
      * @ORM\Column(name="data_final", type="date", nullable=false)
+     * @Assert\NotBlank()
      */
     private $dataFinal;
 
@@ -59,6 +67,7 @@ class Tasques
      * @var string
      *
      * @ORM\Column(name="estat", type="text", length=65535, nullable=false)
+     * @Assert\NotBlank()
      */
     private $estat;
 
@@ -66,6 +75,10 @@ class Tasques
      * @var string
      *
      * @ORM\Column(name="prioritat", type="text", length=65535, nullable=false)
+     * @Assert\Choice(
+     *     choices = { "molt alta", "alta", "mitja", "baixa" },
+     *     message = "Nomes pots assignar la prioritat com a molt alta, alta, mitja o baixa"
+     * )     
      */
     private $prioritat;
 
@@ -73,6 +86,7 @@ class Tasques
      * @var string
      *
      * @ORM\Column(name="departament", type="text", length=65535, nullable=false)
+     * 
      */
     private $departament;
 
