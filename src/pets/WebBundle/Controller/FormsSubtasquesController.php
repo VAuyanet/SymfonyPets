@@ -65,8 +65,8 @@ class FormsSubtasquesController extends Controller
     
     public function searchSubtasquesAction(Request $request)
     {
-        $tasca = new Subtasques(); 
-        $form = $this->createForm(SearchSubtasquesType::class, $tasca); 
+        $subtasca = new Subtasques(); 
+        $form = $this->createForm(SearchSubtasquesType::class, $subtasca); 
         
 
         $form->handleRequest($request);
@@ -74,7 +74,7 @@ class FormsSubtasquesController extends Controller
             $titolForm = "Form Search Subtasques";
             $status = "Formulari vàlid";
             $data = array(
-            'id_subtasca' => $form->get('id_subtasca')->getData(),
+            'idSubtasca' => $form->get('idSubtasca')->getData(),
                 );
         } else{
             $titolForm = null;
@@ -86,12 +86,12 @@ class FormsSubtasquesController extends Controller
              //cridem a l'entity manager
              $em = $this->getDoctrine()->getManager();
              //crearem el repositori de tasques
-             $usuaris_repo = $em->getRepository("petsWebBundle:Subtasques");
+             $subtasques_repo = $em->getRepository("petsWebBundle:Subtasques");
              //cerquem la tasca per id
-             $id = $form->get('id_tasca')->getData();
-             $tasca = $tasques_repo->find($id);
+             $id = $form->get('idSubtasca')->getData();
+             $subtasca = $subtasques_repo->find($id);
              
-             if($usuari != null){
+             if($subtasca != null){
                  $estat = "Subtasca trobada";
              }else{  
                  $estat = "Subtasca no trobada";

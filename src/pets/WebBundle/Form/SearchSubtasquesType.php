@@ -18,7 +18,7 @@ class SearchSubtasquesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('id_subtasca', TextType::class)->add('Enviar', SubmitType::class);    
+        $builder->add('id_subtasca', TextType::class)->add('Cercar', SubmitType::class);    
     }/**
      * {@inheritdoc}
      */

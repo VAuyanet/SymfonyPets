@@ -35,7 +35,7 @@ class FormsLoginController extends Controller
              //crearem el repositori de tasques
              $usuaris_repo = $em->getRepository("petsWebBundle:Usuaris");
              //cerquem la tasca per id
-             $id = $form->get('id_usuari')->getData();
+             $id = $form->get('idUsuari')->getData();
              $tasca = $tasques_repo->find($id);
              
              if($usuari != null){

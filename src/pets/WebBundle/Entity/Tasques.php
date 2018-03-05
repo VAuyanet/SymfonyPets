@@ -40,7 +40,7 @@ class Tasques
      * @ORM\Column(name="descripcio", type="text", length=65535, nullable=false)
      * @Assert\Length(
      * min=5,
-     * minMessage = "El titol ha de ser de com a minim {{ limit }} caracters"
+     * minMessage = "El titol ha de ser de com a minim {{ limit }} caracters",
      * max=240,
      * maxMessage = "El titol ha de ser de com a maxim {{ limit }} caracters"
      * )

@@ -14,20 +14,20 @@ class FormsTasquesController extends Controller
     {
         $tasca = new Tasques(); 
         $form = $this->createForm(TasquesType::class, $tasca); 
-        
+
 
         $form->handleRequest($request);
         if($form->isValid()){
             $titolForm = "Form Create Tasques";
             $status = "Formulari vàlid";
             $data = array(
-            'titol' => $form->get('titol')->getData(),
-            'descripcio' => $form->get('descripcio')->getData(),
-            'data_inici' => $form->get('data_inici')->getData(),
-            'data_final' => $form->get('data_final')->getData(),
-            'estat' => $form->get('estat')->getData(),
-            'prioritat' => $form->get('prioritat')->getData(),
-            'departament' => $form->get('departament')->getData(),
+                'titol' => $form->get('titol')->getData(),
+                'descripcio' => $form->get('descripcio')->getData(),
+                'data_inici' => $form->get('data_inici')->getData(),
+                'data_final' => $form->get('data_final')->getData(),
+                'estat' => $form->get('estat')->getData(),
+                'prioritat' => $form->get('prioritat')->getData(),
+                'departament' => $form->get('departament')->getData(),
             );
         } else{
             $titolForm = null;
@@ -50,62 +50,91 @@ class FormsTasquesController extends Controller
             $em->persist($tasca);
             //executem el flush per guardar en la BDD
             $flush = $em->flush();
-            
-            if($flush != null){
+
+            if($flush == null){
                 $estat = "Tasca inserida";
             }else{
                 $estat = "Tasca no inserida";
             } 
-        
+        $form = $this->createForm(TasquesType::class, $tasca); 
+
         }
         return $this->render('petsWebBundle:Forms:formTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
-        
+
     }
-    
-    
+
+
     public function searchTasquesAction(Request $request)
     {
         $tasca = new Tasques(); 
         $form = $this->createForm(SearchTasquesType::class, $tasca); 
-        
+
 
         $form->handleRequest($request);
         if($form->isValid()){
             $titolForm = "Form Search Tasques";
             $status = "Formulari vàlid";
             $data = array(
-            'id_tasca' => $form->get('id_tasca')->getData(),
-                );
+                'idTasca' => $form->get('idTasca')->getData(),
+            );
         } else{
             $titolForm = null;
             $status = null;
             $data = null;
         }
         $estat="";
-         if($form->isValid()){
-             //cridem a l'entity manager
-             $em = $this->getDoctrine()->getManager();
-             //crearem el repositori de tasques
-             $usuaris_repo = $em->getRepository("petsWebBundle:Tasques");
-             //cerquem la tasca per id
-             $id = $form->get('id_tasca')->getData();
-             $tasca = $tasques_repo->find($id);
-             
-             if($usuari != null){
-                 $estat = "Tasca trobada";
-             }else{  
-                 $estat = "Tasca no trobada";
-             }
-            
-        
+        if($form->isValid()){
+            //cridem a l'entity manager
+            $em = $this->getDoctrine()->getManager();
+            //crearem el repositori de tasques
+            $tasques_repo = $em->getRepository("petsWebBundle:Tasques");
+            //cerquem la tasca per id
+            $id = $form->get('idTasca')->getData();
+            $tasca = $tasques_repo->find($id);
+
+            if($tasca != null){
+                $estat = "Tasca trobada";
+            }else{  
+                $estat = "Tasca no trobada";
+            }
+
+
         }
         return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
-        
+
     }
-    
-    
-    
+
+
+
+    public function deleteTasquesAction(Request $request)
+    {
+        $tasca = new Tasques(); 
+        $estat="";
+        if($form->isValid()){
+            //cridem a l'entity manager
+            $em = $this->getDoctrine()->getManager();
+            //crearem el repositori de tasques
+            $tasques_repo = $em->getRepository("petsWebBundle:Tasques");
+            //cerquem la tasca per id
+            $id = $form->get('idTasca')->getData();
+            $tasca = $tasques_repo->find($id);
+            $em->remove($tasca);
+            $flush = $em->flush();
+            if($flush != null){
+                $estat = "Tasca eliminada";
+            }else{  
+                $estat = "Tasca no eliminada";
+            }
+
+        }
+        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
+
+    }
+
+
+
+
 }
-    
-    
-    
+
+
+
