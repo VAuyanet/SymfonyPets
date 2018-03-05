@@ -1,14 +1,16 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-   {{form_start(form, {'action':'', 'method':'POST'})}}
-    <h1>{{ titol }}</h1>
-    {#{{ form }}#}
-    
-    {{form_end(form)}}
-</body>
+{% include '../Sections/header.html' %}
+    <body>
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    {% include '../Sections/nav.html' %}
+                </div>
+                <div class="col-sm-9">
+                    <h1>{{ titol }}</h1>
+                    {{ form_start(form, {'action':'', 'method':'POST'}) }}
+                    {{ form_end(form) }}
+                </div>
+            </div>
+        </div>
+    </body>
 </html>

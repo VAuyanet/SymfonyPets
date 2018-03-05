@@ -1,16 +1,25 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/global.css') }}">
-</head>
-<body>
-    <a href="{{ path('pets_web_formLogin') }}">Form Login</a><br/>
-    <a href="{{ path('pets_web_formTasquesCreate') }}">Form Create Tasques</a><br/>
-    <a href="{{ path('pets_web_formTasquesSearch') }}">Form Search Tasques</a><br/>
-    <a href="{{ path('pets_web_formSubtasquesCreate') }}">Form Create Subtasques</a><br/>
-    <a href="{{ path('pets_web_formSubtasquesSearch') }}">Form Search Subtasques</a><br/>
-    <a href="{{ path('pets_web_formUsuaris') }}">Form Registre usuari</a><br/>
-</body>
+{% include '../Sections/header.html' %}
+    <body>
+<!--       .container-fluid>.row>.col-sm-3+.col-sm-9-->
+        <div class="container-fluid">
+            <div class="row">
+                <div class="col-sm-3">
+                    {% include '../Sections/nav.html' %}
+                </div>
+                <div class="col-sm-9">
+                        
+                </div>
+            </div>
+        </div>
+
+        <!--SCRIPTS-->
+        {% block js %}
+
+            <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+            <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+            <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
+        {% endblock %}
+
+        <!--SCRIPTS-->
+    </body>
 </html>
