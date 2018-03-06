@@ -104,14 +104,15 @@ class FormsSubtasquesController extends Controller
     }
     
     
-    public function llistaSubtasquesAction(Request $request)
+    public function llistaSubtasquesAction($id)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
        $titol="Llista subtasques";
        $query = $entityManager->createQuery(
         'SELECT s
-        FROM petsWebBundle:Subtasques s'
+        FROM petsWebBundle:Subtasques s
+        WHERE s.idTasca= '.$id.' '
        );
         $subtasques = $query->getResult();  
 

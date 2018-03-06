@@ -39,7 +39,7 @@ class FormsUsuarisController extends Controller
             $usuari->setCognoms($form->get('cognoms')->getData());
             $usuari->setEmail($form->get('email')->getData());
             $usuari->setPerfil($form->get('perfil')->getData());
-            $usuari->setPassword($form->get('password')->getData());
+            $usuari->setPassword(md5($form->get('password')->getData()));
             $usuari->setDepartament($form->get('departament')->getData());
             //fem el mateix per la resta d'atributs
             //cridem a l'entity manager

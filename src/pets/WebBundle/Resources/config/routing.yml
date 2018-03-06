@@ -23,7 +23,7 @@ pets_web_llistaTasques:
     path:     /llistaTasques
     defaults: { _controller: petsWebBundle:FormsTasques:llistaTasques }
 pets_web_llistaSubtasques:
-    path:     /llistaSubtasques
+    path:     /llistaSubtasques/{id}
     defaults: { _controller: petsWebBundle:FormsSubtasques:llistaSubtasques }
 pets_web_llistaUsuaris:
     path:     /llistaUsuaris

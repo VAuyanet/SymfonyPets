@@ -10,7 +10,8 @@ use Symfony\Component\Form\Extension\Core\Type\TextareaType;
 use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
-//TextType, TextareaType, SubmitType, etc. 
+use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+
 class UsuarisType extends AbstractType
 {
     /**
@@ -18,7 +19,7 @@ class UsuarisType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('password', TextType::class)->add('departament', TextType::class)->add('Enviar', SubmitType::class);       
+        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('password', PasswordType::class)->add('departament', TextType::class)->add('Enviar', SubmitType::class);       
     }/**
      * {@inheritdoc}
      */

@@ -14,6 +14,10 @@ nav {
 }
 
 .nav-link {
+    color: #fff;
+}
+.nav-link:hover{
+    background-color: #fff;
     color: #0FC590;
 }
 
@@ -22,3 +26,11 @@ input {
     border-radius: 5px;
 }
 
+/*TABLES*/
+#table-llista{
+    background-color: azure;
+}
+
+table, tr, td{
+    padding: 5px;
+}
