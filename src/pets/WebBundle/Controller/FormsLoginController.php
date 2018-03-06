@@ -27,7 +27,7 @@ class FormsLoginController extends Controller
             $id = $form->get('idUsuari')->getData();
             //$usuari = $usuaris_repo->find($id);
             $usuari = $usuaris_repo->findOneBy([
-                'username' => $username,
+                'email' => $email,
                 'password' => $password,
             ]);
             if($usuari != null){

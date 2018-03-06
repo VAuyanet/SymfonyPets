@@ -59,5 +59,23 @@ class FormsUsuarisController extends Controller
         }
         return $this->render('petsWebBundle:Forms:formUsuaris.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView() ));
     }
+    
+    
+    public function llistaUsuarisAction(Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+       $titol="Llista usuaris";
+       $query = $entityManager->createQuery(
+        'SELECT u
+        FROM petsWebBundle:Usuaris u'
+       );
+        $usuaris = $query->getResult();  
+
+        return $this->render('petsWebBundle:Llistes:llistaUsuaris.html.twig', array( 'titol' => $titol, 'usuaris' =>$usuaris ));
+
+
+    }
+    
 
 }

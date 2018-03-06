@@ -102,4 +102,23 @@ class FormsSubtasquesController extends Controller
         return $this->render('petsWebBundle:Forms:formSearchSubtasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
         
     }
+    
+    
+    public function llistaSubtasquesAction(Request $request)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+       $titol="Llista subtasques";
+       $query = $entityManager->createQuery(
+        'SELECT s
+        FROM petsWebBundle:Subtasques s'
+       );
+        $subtasques = $query->getResult();  
+
+        return $this->render('petsWebBundle:Llistes:llistaSubtasques.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques ));
+
+
+    }
+    
+    
 }

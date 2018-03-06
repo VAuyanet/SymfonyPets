@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> {{ titol }} </h1>
+        <table border="1px ">
+            <tr>
+                <th>idTasca</th>
+                <th>Titol</th>
+                <th>Descripcio</th>
+                <th>Data inici</th>
+                <th>Data final</th>
+                <th>Estat</th>
+                <th>Prioritat</th>
+                <th>Departament</th>
+            </tr>
+
+            {% for key,value in tasques %}
+                <tr>
+                    <td>{{ value.idTasca }}</td>
+                    <td>{{ value.titol }}</td>
+                    <td>{{ value.descripcio }}</td>
+                    <td>{{ value.dataInici|date('d-m-Y') }}</td>
+                    <td>{{ value.dataFinal|date('d-m-Y') }}</td>
+                    <td>{{ value.estat }}</td>
+                    <td>{{ value.prioritat }}</td>
+                    <td>{{ value.departament }}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </body>
+</html>

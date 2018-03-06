@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> {{ titol }} </h1>
+        <table border="1px ">
+            <tr>
+                <th>idSubtasca</th>
+                <th>Titol</th>
+                <th>Descripcio</th>
+                <th>Data inici</th>
+                <th>Data final</th>
+                <th>Prioritat</th>
+                <th>Usuaris</th>
+            </tr>
+
+            {% for key,value in subtasques %}
+                <tr>
+                    <td>{{ value.idSubtasca }}</td>
+                    <td>{{ value.titol }}</td>
+                    <td>{{ value.descripcio }}</td>
+                    <td>{{ value.dataInici|date('d-m-Y') }}</td>
+                    <td>{{ value.dataFinal|date('d-m-Y') }}</td>
+                    <td>{{ value.prioritat }}</td>
+                    <td>{{ value.usuaris }}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </body>
+</html>

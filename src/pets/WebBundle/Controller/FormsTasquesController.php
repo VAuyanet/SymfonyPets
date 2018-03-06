@@ -7,6 +7,7 @@ use pets\WebBundle\Form\TasquesType;
 use pets\WebBundle\Form\SearchTasquesType;
 use pets\WebBundle\Entity\Tasques;
 use Symfony\Component\HttpFoundation\Request;
+use Doctrine\ORM\EntityManagerInterface;
 
 class FormsTasquesController extends Controller
 {
@@ -56,7 +57,7 @@ class FormsTasquesController extends Controller
             }else{
                 $estat = "Tasca no inserida";
             } 
-        $form = $this->createForm(TasquesType::class, $tasca); 
+            $form = $this->createForm(TasquesType::class, $tasca); 
 
         }
         return $this->render('petsWebBundle:Forms:formTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
@@ -71,7 +72,7 @@ class FormsTasquesController extends Controller
 
 
         $form->handleRequest($request);
-        if($form->isValid()){
+        /*if($form->isValid()){
             $titolForm = "Form Search Tasques";
             $status = "Formulari vàlid";
             $data = array(
@@ -81,8 +82,9 @@ class FormsTasquesController extends Controller
             $titolForm = null;
             $status = null;
             $data = null;
-        }
+        }*/
         $estat="";
+
         if($form->isValid()){
             //cridem a l'entity manager
             $em = $this->getDoctrine()->getManager();
@@ -130,6 +132,44 @@ class FormsTasquesController extends Controller
         return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
 
     }
+
+
+
+    public function updateTasquesAction(Request $request)
+    {
+
+    }
+
+    public function llistaTasquesAction(Request $request)
+    {
+        /*$conn = $this->getEntityManager()->getConnection();
+
+        $sql = '
+        SELECT * FROM tasques 
+        ';
+        $stmt = $conn->prepare($sql);
+        $stmt->execute();
+
+        // returns an array of arrays (i.e. a raw data set)
+        return $stmt->fetchAll();*/
+
+
+
+        $entityManager = $this->getDoctrine()->getManager();
+
+       $titol="Llista tasques";
+       $query = $entityManager->createQuery(
+        'SELECT t
+        FROM petsWebBundle:Tasques t'
+       );
+        $tasques = $query->getResult();  
+
+        return $this->render('petsWebBundle:Llistes:llistaTasques.html.twig', array( 'titol' => $titol, 'tasques' =>$tasques ));
+
+
+    }
+
+
 
 
 

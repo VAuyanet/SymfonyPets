@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+    </head>
+    <body>
+        <h1> {{ titol }} </h1>
+        <table border="1px ">
+            <tr>
+                <th>idUsuari</th>
+                <th>Nom</th>
+                <th>Cognoms</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Password</th>
+                <th>Departament</th>
+            </tr>
+
+            {% for key,value in usuaris %}
+                <tr>
+                    <td>{{ value.idUsuari }}</td>
+                    <td>{{ value.nom }}</td>
+                    <td>{{ value.cognoms }}</td>
+                    <td>{{ value.email }}</td>
+                    <td>{{ value.perfil }}</td>
+                    <td>{{ value.password }}</td>
+                    <td>{{ value.departament }}</td>
+            </tr>
+
+            {% endfor %}
+        </table>
+    </body>
+</html>
