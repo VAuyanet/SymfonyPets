@@ -1,14 +1,6 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-</head>
-<body>
-   {{form_start(form, {'action':'', 'method':'POST'})}}
+{% extends "base.html.twig" %}
+{% block content %}
     <h1>{{ titol }}</h1>
-    {#{{ form }}#}
-    
-    {{form_end(form)}}
-</body>
-</html>
+    {{ form_start(form, {'action':'', 'method':'POST'}) }}
+    {{ form_end(form) }}
+{% endblock %}

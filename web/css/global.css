@@ -1,8 +1,24 @@
-a{
-    color: green;
+/* GENERIC */
+body {
+    margin: 0;
 }
 
-input{
+/* NAV */
+nav {
+    height: 100%;
+}
+
+.nav-background {
+    background-color: #2A2A2A;
+    
+}
+
+.nav-link {
+    color: #0FC590;
+}
+
+/* FORMS */
+input {
     border-radius: 5px;
 }
 

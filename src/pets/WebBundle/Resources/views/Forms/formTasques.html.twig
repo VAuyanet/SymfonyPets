@@ -1,17 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title>Document</title>
-    <link rel="stylesheet" type="text/css" href="{{ asset('css/global.css') }}">
-</head>
-<body>
+{% extends "base.html.twig" %}
+{% block content %}
    {{form_start(form, {'action':'', 'method':'POST'})}}
     <h1>{{ titol }}</h1>
     {#{{ form }}#}
     
     {{form_end(form)}}
+<<<<<<< HEAD
     
     {{ estat }}
 </body>
 </html>
+=======
+{% endblock %}
+>>>>>>> master
