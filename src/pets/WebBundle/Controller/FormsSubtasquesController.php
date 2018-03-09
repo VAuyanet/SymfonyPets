@@ -15,7 +15,9 @@ class FormsSubtasquesController extends Controller
     {
         $subtasca = new Subtasques(); 
         $form = $this->createForm(SubtasquesType::class, $subtasca);
+        $id=$form->get('idTasca')->getData();
 
+       
         $form->handleRequest($request);
         if($form->isValid()){
             $titolForm = "Form Create Subtasques";
@@ -25,7 +27,7 @@ class FormsSubtasquesController extends Controller
                 'descripcio' => $form->get('descripcio')->getData(),
                 'data_inici' => $form->get('dataInici')->getData(),
                 'data_final' => $form->get('dataFinal')->getData(),
-               'prioritat' => $form->get('prioritat')->getData(),
+                'prioritat' => $form->get('prioritat')->getData(),
                 'usuaris' => $form->get('usuaris')->getData(),
                 'idTasca' => $form->get('idTasca')->getData(),
             );
@@ -62,64 +64,64 @@ class FormsSubtasquesController extends Controller
         }
         return $this->render('petsWebBundle:Forms:formSubtasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView() ));
     }
-    
+
     public function searchSubtasquesAction(Request $request)
     {
         $subtasca = new Subtasques(); 
         $form = $this->createForm(SearchSubtasquesType::class, $subtasca); 
-        
+
 
         $form->handleRequest($request);
         if($form->isValid()){
             $titolForm = "Form Search Subtasques";
             $status = "Formulari vàlid";
             $data = array(
-            'idSubtasca' => $form->get('idSubtasca')->getData(),
-                );
+                'idSubtasca' => $form->get('idSubtasca')->getData(),
+            );
         } else{
             $titolForm = null;
             $status = null;
             $data = null;
         }
         $estat="";
-         if($form->isValid()){
-             //cridem a l'entity manager
-             $em = $this->getDoctrine()->getManager();
-             //crearem el repositori de tasques
-             $subtasques_repo = $em->getRepository("petsWebBundle:Subtasques");
-             //cerquem la tasca per id
-             $id = $form->get('idSubtasca')->getData();
-             $subtasca = $subtasques_repo->find($id);
-             
-             if($subtasca != null){
-                 $estat = "Subtasca trobada";
-             }else{  
-                 $estat = "Subtasca no trobada";
-             }
-            
-        
+        if($form->isValid()){
+            //cridem a l'entity manager
+            $em = $this->getDoctrine()->getManager();
+            //crearem el repositori de tasques
+            $subtasques_repo = $em->getRepository("petsWebBundle:Subtasques");
+            //cerquem la tasca per id
+            $id = $form->get('idSubtasca')->getData();
+            $subtasca = $subtasques_repo->find($id);
+
+            if($subtasca != null){
+                $estat = "Subtasca trobada";
+            }else{  
+                $estat = "Subtasca no trobada";
+            }
+
+
         }
         return $this->render('petsWebBundle:Forms:formSearchSubtasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
-        
+
     }
-    
-    
+
+
     public function llistaSubtasquesAction($id)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
-       $titol="Llista subtasques";
-       $query = $entityManager->createQuery(
-        'SELECT s
+        $titol="Llista subtasques";
+        $query = $entityManager->createQuery(
+            'SELECT s
         FROM petsWebBundle:Subtasques s
         WHERE s.idTasca= '.$id.' '
-       );
+        );
         $subtasques = $query->getResult();  
 
         return $this->render('petsWebBundle:Llistes:llistaSubtasques.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques ));
 
 
     }
-    
-    
+
+
 }

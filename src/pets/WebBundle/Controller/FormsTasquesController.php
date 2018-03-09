@@ -157,11 +157,11 @@ class FormsTasquesController extends Controller
 
         $entityManager = $this->getDoctrine()->getManager();
 
-       $titol="Llista tasques";
-       $query = $entityManager->createQuery(
-        'SELECT t
+        $titol="Llista tasques";
+        $query = $entityManager->createQuery(
+            'SELECT t
         FROM petsWebBundle:Tasques t'
-       );
+        );
         $tasques = $query->getResult();  
 
         return $this->render('petsWebBundle:Llistes:llistaTasques.html.twig', array( 'titol' => $titol, 'tasques' =>$tasques ));

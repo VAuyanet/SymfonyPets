@@ -65,11 +65,10 @@ class Subtasques
     private $usuaris;
 
     /**
-     * @var \Tasques
+     * @var integer
      *
-     * @ORM\ManyToOne(targetEntity="Tasques")
-     * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="idTasca", referencedColumnName="idTasca")
+     * @ORM\Column(name="idTasca", nullable=false)
+
      * })
      */
     private $idTasca;
