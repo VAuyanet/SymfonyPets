@@ -8,7 +8,7 @@ use Symfony\Component\Validator\Constraints as Assert;
 /**
  * Subtasques
  *
- * @ORM\Table(name="subtasques", indexes={@ORM\Index(name="id_tasca", columns={"id_tasca"})})
+ * @ORM\Table(name="subtasques", indexes={@ORM\Index(name="idTasca", columns={"idTasca"})})
  * @ORM\Entity
  */
 class Subtasques
@@ -69,13 +69,13 @@ class Subtasques
      *
      * @ORM\ManyToOne(targetEntity="Tasques")
      * @ORM\JoinColumns({
-     *   @ORM\JoinColumn(name="id_tasca", referencedColumnName="id_tasca")
+     *   @ORM\JoinColumn(name="idTasca", referencedColumnName="idTasca")
      * })
      */
     private $idTasca;
 
 
-
+   
     /**
      * Get idSubtasca
      *

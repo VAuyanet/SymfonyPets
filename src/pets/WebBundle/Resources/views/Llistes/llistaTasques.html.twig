@@ -16,7 +16,7 @@
             {% for key,value in tasques %}
                 <tr>
                     <td>{{ value.idTasca }}</td>
-                    <td>{{ value.titol }}</td>
+                    <td><a href="{{ path('pets_web_llistaSubtasques', {'id': value.idTasca}) }}">{{ value.titol }}</a></td>
                     <td>{{ value.descripcio }}</td>
                     <td>{{ value.dataInici|date('d-m-Y') }}</td>
                     <td>{{ value.dataFinal|date('d-m-Y') }}</td>

@@ -2,9 +2,9 @@
 <doctrine-mapping xmlns="http://doctrine-project.org/schemas/orm/doctrine-mapping" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://doctrine-project.org/schemas/orm/doctrine-mapping http://doctrine-project.org/schemas/orm/doctrine-mapping.xsd">
   <entity name="Subtasques" table="subtasques">
     <indexes>
-      <index name="id_tasca" columns="id_tasca"/>
+      <index name="idTasca" columns="idTasca"/>
     </indexes>
-    <id name="idSubtasca" type="integer" column="id_subtasca">
+    <id name="idSubtasca" type="integer" column="idSubtasca">
       <generator strategy="IDENTITY"/>
     </id>
     <field name="titol" type="text" column="titol" length="65535" nullable="false">
@@ -31,7 +31,7 @@
     </field>
     <many-to-one field="idTasca" target-entity="Tasques" fetch="LAZY">
       <join-columns>
-        <join-column name="id_tasca" referenced-column-name="id_tasca"/>
+        <join-column name="idTasca" referenced-column-name="idTasca"/>
       </join-columns>
     </many-to-one>
   </entity>

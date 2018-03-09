@@ -27,7 +27,7 @@ class FormsSubtasquesController extends Controller
                 'data_final' => $form->get('dataFinal')->getData(),
                'prioritat' => $form->get('prioritat')->getData(),
                 'usuaris' => $form->get('usuaris')->getData(),
-                'id_tasca' => $form->get('idTasca')->getData(),
+                'idTasca' => $form->get('idTasca')->getData(),
             );
         } else{
             $titolForm = null;
