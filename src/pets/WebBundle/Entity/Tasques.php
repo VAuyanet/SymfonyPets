@@ -16,7 +16,7 @@ class Tasques
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_tasca", type="integer", nullable=false)
+     * @ORM\Column(name="idTasca", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */

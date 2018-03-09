@@ -16,7 +16,7 @@ class Subtasques
     /**
      * @var integer
      *
-     * @ORM\Column(name="id_subtasca", type="integer", nullable=false)
+     * @ORM\Column(name="idSubtasca", type="integer", nullable=false)
      * @ORM\Id
      * @ORM\GeneratedValue(strategy="IDENTITY")
      */

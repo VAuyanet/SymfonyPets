@@ -102,7 +102,7 @@ class FormsTasquesController extends Controller
 
 
         }
-        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
+        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'form' =>$form->createView(), 'estat' => $estat, 'tasca' => $tasca  ));
 
     }
 
@@ -129,7 +129,7 @@ class FormsTasquesController extends Controller
             }
 
         }
-        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
+        return $this->render('petsWebBundle:Forms:formSearchTasques.html.twig', array( 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat ));
 
     }
 
