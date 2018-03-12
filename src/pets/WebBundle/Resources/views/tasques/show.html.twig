@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Tasque</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idtasca</th>
+                <td>{{ tasque.idTasca }}</td>
+            </tr>
+            <tr>
+                <th>Titol</th>
+                <td>{{ tasque.titol }}</td>
+            </tr>
+            <tr>
+                <th>Descripcio</th>
+                <td>{{ tasque.descripcio }}</td>
+            </tr>
+            <tr>
+                <th>Datainici</th>
+                <td>{% if tasque.dataInici %}{{ tasque.dataInici|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datafinal</th>
+                <td>{% if tasque.dataFinal %}{{ tasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Estat</th>
+                <td>{{ tasque.estat }}</td>
+            </tr>
+            <tr>
+                <th>Prioritat</th>
+                <td>{{ tasque.prioritat }}</td>
+            </tr>
+            <tr>
+                <th>Departament</th>
+                <td>{{ tasque.departament }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('tasques_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

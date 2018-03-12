@@ -1,0 +1,51 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Subtasques list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Idsubtasca</th>
+                <th>Titol</th>
+                <th>Descripcio</th>
+                <th>Datainici</th>
+                <th>Datafinal</th>
+                <th>Prioritat</th>
+                <th>Usuaris</th>
+                <th>Idtasca</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for subtasque in subtasques %}
+            <tr>
+                <td><a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">{{ subtasque.idSubtasca }}</a></td>
+                <td>{{ subtasque.titol }}</td>
+                <td>{{ subtasque.descripcio }}</td>
+                <td>{% if subtasque.dataInici %}{{ subtasque.dataInici|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if subtasque.dataFinal %}{{ subtasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ subtasque.prioritat }}</td>
+                <td>{{ subtasque.usuaris }}</td>
+                <td>{{ subtasque.idTasca }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('subtasques_new') }}">Create a new subtasque</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,24 @@
+tasques_index:
+    path:     /
+    defaults: { _controller: "petsWebBundle:Tasques:index" }
+    methods:  GET
+
+tasques_show:
+    path:     /{idTasca}/show
+    defaults: { _controller: "petsWebBundle:Tasques:show" }
+    methods:  GET
+
+tasques_new:
+    path:     /new
+    defaults: { _controller: "petsWebBundle:Tasques:new" }
+    methods:  [GET, POST]
+
+tasques_edit:
+    path:     /{idTasca}/edit
+    defaults: { _controller: "petsWebBundle:Tasques:edit" }
+    methods:  [GET, POST]
+
+tasques_delete:
+    path:     /{idTasca}/delete
+    defaults: { _controller: "petsWebBundle:Tasques:delete" }
+    methods:  DELETE

@@ -11,6 +11,7 @@
     <body>
 
         {% block header %}
+<!--
             <div id="carouselExampleIndicators" class="carousel slide" data-ride="carousel">
                 <ol class="carousel-indicators">
                     <li data-target="#carouselExampleIndicators" data-slide-to="0" class="active"></li>
@@ -37,6 +38,7 @@
                     <span class="sr-only">Next</span>
                 </a>
             </div>
+-->
         {% endblock %}
         {% block body %}
             <div class="container-fluid">
@@ -45,13 +47,11 @@
                         {% block nav %}
                             <nav class="nav flex-column">
                                 <a href="{{ path('pets_web_formLogin') }}" class="nav-link">Form Login</a>
-                                <a href="{{ path('pets_web_formTasquesCreate') }}" class="nav-link">Form Create Tasques</a>
-                                <a href="{{ path('pets_web_formTasquesSearch') }}" class="nav-link">Form Search Tasques</a>
-                                <a href="{{ path('pets_web_formSubtasquesCreate') }}" class="nav-link">Form Create Subtasques</a>
-                                <a href="{{ path('pets_web_formSubtasquesSearch') }}" class="nav-link">Form Search Subtasques</a>
+
+                                <a href="{{ path('pets_web_tasques') }}" class="nav-link">Form Search Tasques</a>
+
+                                <a href="{{ path('pets_web_subtasques') }}" class="nav-link">Form Search Subtasques</a>
                                 <a href="{{ path('pets_web_formUsuaris') }}" class="nav-link">Form Registre usuari</a>
-                                <a href="{{ path('pets_web_llistaTasques') }}" class="nav-link">Llista Tasques</a>
-                                {#<a href="{{ path('pets_web_llistaSubtasques') }}" class="nav-link">Llista Subtasques</a>#}
                                 <a href="{{ path('pets_web_llistaUsuaris') }}" class="nav-link">Llista Usuaris</a>
                             </nav>  
                         {% endblock %}

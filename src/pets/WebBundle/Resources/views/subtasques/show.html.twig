@@ -1,0 +1,56 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Subtasque</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Idsubtasca</th>
+                <td>{{ subtasque.idSubtasca }}</td>
+            </tr>
+            <tr>
+                <th>Titol</th>
+                <td>{{ subtasque.titol }}</td>
+            </tr>
+            <tr>
+                <th>Descripcio</th>
+                <td>{{ subtasque.descripcio }}</td>
+            </tr>
+            <tr>
+                <th>Datainici</th>
+                <td>{% if subtasque.dataInici %}{{ subtasque.dataInici|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Datafinal</th>
+                <td>{% if subtasque.dataFinal %}{{ subtasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
+            </tr>
+            <tr>
+                <th>Prioritat</th>
+                <td>{{ subtasque.prioritat }}</td>
+            </tr>
+            <tr>
+                <th>Usuaris</th>
+                <td>{{ subtasque.usuaris }}</td>
+            </tr>
+            <tr>
+                <th>Idtasca</th>
+                <td>{{ subtasque.idTasca }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('subtasques_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

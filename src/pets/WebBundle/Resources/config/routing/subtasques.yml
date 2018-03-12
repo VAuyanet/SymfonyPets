@@ -1,0 +1,24 @@
+subtasques_index:
+    path:     /
+    defaults: { _controller: "petsWebBundle:Subtasques:index" }
+    methods:  GET
+
+subtasques_show:
+    path:     /{idSubtasca}/show
+    defaults: { _controller: "petsWebBundle:Subtasques:show" }
+    methods:  GET
+
+subtasques_new:
+    path:     /new
+    defaults: { _controller: "petsWebBundle:Subtasques:new" }
+    methods:  [GET, POST]
+
+subtasques_edit:
+    path:     /{idSubtasca}/edit
+    defaults: { _controller: "petsWebBundle:Subtasques:edit" }
+    methods:  [GET, POST]
+
+subtasques_delete:
+    path:     /{idSubtasca}/delete
+    defaults: { _controller: "petsWebBundle:Subtasques:delete" }
+    methods:  DELETE

@@ -1,3 +1,10 @@
+pets_web_subtasques:
+    resource: "@petsWebBundle/Resources/config/routing/subtasques.yml"
+    prefix:   /subtasques
+pets_web_tasques:
+    resource: "@petsWebBundle/Resources/config/routing/tasques.yml"
+    prefix:   /tasques
+
 pets_web_homepage:
     path:     /
     defaults: { _controller: petsWebBundle:Default:index }
@@ -7,24 +14,6 @@ pets_web_formUsuaris:
 pets_web_formLogin:
     path:     /formLogin
     defaults: { _controller: petsWebBundle:FormsLogin:login }
-pets_web_formTasquesCreate:
-    path:     /formTasques
-    defaults: { _controller: petsWebBundle:FormsTasques:createTasques }
-pets_web_formTasquesSearch:
-    path:     /formSearchTasques
-    defaults: { _controller: petsWebBundle:FormsTasques:searchTasques }
-pets_web_formSubtasquesCreate:
-    path:     /formSubtasques
-    defaults: { _controller: petsWebBundle:FormsSubtasques:createSubtasques }
-pets_web_formSubtasquesSearch:
-    path:     /formSearchSubtasques
-    defaults: { _controller: petsWebBundle:FormsSubtasques:searchSubtasques }
-pets_web_llistaTasques:
-    path:     /llistaTasques
-    defaults: { _controller: petsWebBundle:FormsTasques:llistaTasques }
-pets_web_llistaSubtasques:
-    path:     /llistaSubtasques/{id}
-    defaults: { _controller: petsWebBundle:FormsSubtasques:llistaSubtasques }
 pets_web_llistaUsuaris:
     path:     /llistaUsuaris
     defaults: { _controller: petsWebBundle:FormsUsuaris:llistaUsuaris }
