@@ -1,36 +1,46 @@
 /* GENERIC */
+
+html,
 body {
-    margin: 0;
+    height: 100%;
+    margin: 0px;
+    padding: 0px;
 }
 
 /* NAV */
+
 nav {
     height: 100%;
 }
 
 .nav-background {
     background-color: #2A2A2A;
-    
+
 }
 
 .nav-link {
     color: #fff;
 }
-.nav-link:hover{
+
+.nav-link:hover {
     background-color: #fff;
     color: #0FC590;
 }
 
 /* FORMS */
+
 input {
     border-radius: 5px;
 }
 
 /*TABLES*/
-#table-llista{
+
+#table-llista {
     background-color: azure;
 }
 
-table, tr, td{
+table,
+tr,
+td {
     padding: 5px;
 }
