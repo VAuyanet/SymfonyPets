@@ -25,7 +25,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="nom", type="text", length=65535, nullable=false)
-     * @Assert\NotBlank()
+     * 
      */
     private $nom;
 
@@ -33,7 +33,7 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="cognoms", type="text", length=65535, nullable=false)
-     * @Assert\NotBlank()
+     * 
      */
     private $cognoms;
 
@@ -52,7 +52,6 @@ class Usuaris
      * @var string
      *
      * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
-     * @Assert\NotBlank()
      * @Assert\Choice(
      *     choices = { "admin", "treballador", "booking" },
      *     message = "Nomes pots assignar el rol de admin, treballador o booking"

@@ -32,7 +32,7 @@ class Departament
      */
     private $nom;
 
-    
+
     /**
      * Get idDepartament
      *
@@ -67,5 +67,9 @@ class Departament
         return $this->nom;
     }
 
-    
+    public function __toString() {
+        return strval($this->idDepartament);
+    }
+
+
 }

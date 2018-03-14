@@ -4,16 +4,16 @@ pets_web_subtasques:
 pets_web_tasques:
     resource: "@petsWebBundle/Resources/config/routing/tasques.yml"
     prefix:   /tasques
+pets_web_usuaris:
+    resource: "@petsWebBundle/Resources/config/routing/usuaris.yml"
+    prefix:   /usuaris
 
 pets_web_homepage:
     path:     /
-    defaults: { _controller: petsWebBundle:Default:index }
+    defaults: { _controller: petsWebBundle:FormsLogin:login }
 pets_web_formUsuaris:
     path:     /formUsuaris
     defaults: { _controller: petsWebBundle:FormsUsuaris:create }
-pets_web_formLogin:
-    path:     /formLogin
-    defaults: { _controller: petsWebBundle:Security:login }
-pets_web_llistaUsuaris:
-    path:     /llistaUsuaris
-    defaults: { _controller: petsWebBundle:FormsUsuaris:llistaUsuaris }
+#pets_web_formLogin:
+#    path:     /login
+#    defaults: { _controller: petsWebBundle:FormsLogin:login }

@@ -1,0 +1,24 @@
+usuaris_index:
+    path:     /
+    defaults: { _controller: "petsWebBundle:Usuaris:index" }
+    methods:  GET
+
+usuaris_show:
+    path:     /{idUsuari}/show
+    defaults: { _controller: "petsWebBundle:Usuaris:show" }
+    methods:  GET
+
+usuaris_new:
+    path:     /new
+    defaults: { _controller: "petsWebBundle:Usuaris:new" }
+    methods:  [GET, POST]
+
+usuaris_edit:
+    path:     /{idUsuari}/edit
+    defaults: { _controller: "petsWebBundle:Usuaris:edit" }
+    methods:  [GET, POST]
+
+usuaris_delete:
+    path:     /{idUsuari}/delete
+    defaults: { _controller: "petsWebBundle:Usuaris:delete" }
+    methods:  DELETE

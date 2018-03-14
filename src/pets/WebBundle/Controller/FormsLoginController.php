@@ -24,14 +24,14 @@ class FormsLoginController extends Controller
 
             $em = $this->getDoctrine()->getManager();
             $usuaris_repo = $em->getRepository("petsWebBundle:Usuaris");
-            $id = $form->get('idUsuari')->getData();
+//            $id = $form->get('idUsuari')->getData();
             //$usuari = $usuaris_repo->find($id);
             $usuari = $usuaris_repo->findOneBy([
                 'email' => $email,
                 'password' => $password,
             ]);
             if($usuari != null){
-                return $this->redirectToRoute('pets_web_formTasquesCreate');
+                return $this->redirectToRoute('pets_web_usuaris');
                 $estat ="login correcte";
             }else{  
                 return $this->render('petsWebBundle:Forms:formLogin.html.twig', array( 'status' => $status, 'data' => $data, 'titol' => $titolForm, 'form' =>$form->createView(), 'estat' => $estat  ));
