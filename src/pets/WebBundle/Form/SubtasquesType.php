@@ -11,6 +11,8 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Bridge\Doctrine\Form\Type\EntityType;
+use pets\WebBundle\Entity\Usuaris;
 //TextType, TextareaType, SubmitType, etc. 
 class SubtasquesType extends AbstractType
 {
@@ -19,7 +21,13 @@ class SubtasquesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('usuaris', TextType::class)->add('idTasca', TextType::class);
+        $builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('Usuaris', EntityType::class, array(
+                'class' => 'petsWebBundle:Usuaris',
+                'choice_label' => 'nom',
+                'multiple' => FALSE,
+                'label_attr'=> array('class' => 'labelT'), 
+                'attr' => array('class' => 'form-control')
+                ))->add('idTasca', TextType::class);
     }/**
      * {@inheritdoc}
      */

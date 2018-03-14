@@ -13,7 +13,7 @@ pets_web_formUsuaris:
     defaults: { _controller: petsWebBundle:FormsUsuaris:create }
 pets_web_formLogin:
     path:     /formLogin
-    defaults: { _controller: petsWebBundle:FormsLogin:login }
+    defaults: { _controller: petsWebBundle:Security:login }
 pets_web_llistaUsuaris:
     path:     /llistaUsuaris
     defaults: { _controller: petsWebBundle:FormsUsuaris:llistaUsuaris }
