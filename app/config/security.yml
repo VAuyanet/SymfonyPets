@@ -38,7 +38,7 @@ security:
         # require ROLE_ADMIN for /subtasques*
         - { path: ^/subtasques, roles: ROLE_ADMIN }
         
-        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+        - { path: ^/login$, roles: IS_AUTHENTICATED_ANONYMOUSLY }
             #logout:
             #  path: logout
             #  target: /

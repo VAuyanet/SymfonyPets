@@ -21,7 +21,7 @@
         {% for tasque in tasques %}
             <tr>
                 <td><a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">{{ tasque.idTasca }}</a></td>
-                <td><a href="{{ path('pets_web_subtasques', {'id': tasque.idTasca}) }}">{{ tasque.titol}}</a></td>
+                <td><a href="{{ path('subtasques_index', {'id': tasque.idTasca}) }}">{{ tasque.titol}}</a></td>
                 <td>{{ tasque.descripcio }}</td>
                 <td>{% if tasque.dataInici %}{{ tasque.dataInici|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if tasque.dataFinal %}{{ tasque.dataFinal|date('Y-m-d') }}{% endif %}</td>

@@ -250,7 +250,8 @@ class Usuaris implements UserInterface
     public function getRoles()
     {
         // En este caso definimos un rol fijo, en el caso de que tengamos un campo role en la tabla de la BBDD    tendríamos que hacer $this->getRole()
-        return array('ROLE_USER');
+//        return array('ROLE_ADMIN','ROLE_TREBALLADOR','ROLE_CONTINGUT');
+        return ['ROLE_ADMIN'];
     }
 
     public function eraseCredentials()
