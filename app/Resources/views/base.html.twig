@@ -18,9 +18,9 @@
                     <div class="col-sm-3 nav-background">
                         {% block nav %}
                             <nav class="nav flex-column">
-                                <!--a href="{#{ path('pets_web_usuaris') }#}" class="nav-link">Form Login</a>
-                                <a href="{#{ path('pets_web_tasques') }#}" class="nav-link">Form Login</a>
-                                <a href="{#{ path('pets_web_subtasques') }#}" class="nav-link">Form Login</a-->
+                                <a href="{{ path('tasques_index') }}" class="nav-link">Tasques</a>
+                                <a href="{{ path('subtasques_index') }}" class="nav-link">Subtasques</a>
+                                <a href="{{ path('usuaris_index') }}" class="nav-link">Usuaris</a>
                             </nav>  
                         {% endblock %}
                     </div>

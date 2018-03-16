@@ -1,11 +1,15 @@
 # To get started with security, check out the documentation:
-# https://symfony.com/doc/current/security.html
+# http://symfony.com/doc/current/security.html
 security:
-
-    # https://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
+    encoders:
+        pets\WebBundle\Entity\Usuaris: bcrypt
+       
+    # http://symfony.com/doc/current/security.html#b-configuring-how-users-are-loaded
     providers:
-        in_memory:
-            memory: ~
+        symfonypets:
+            entity:
+                class: petsWebBundle:Usuaris
+                property: email
 
     firewalls:
         # disables authentication for assets and the profiler, adapt it according to your needs
@@ -15,10 +19,42 @@ security:
 
         main:
             anonymous: ~
+            http_basic: ~
+            provider: symfonypets
+            form_login:
+                login_path: pets_web_login
+                check_path: pets_web_login
+                default_target_path: pets_web_homepage
+            logout:
+                path:   /logout
+                target: /
+
+    access_control:
+       
+        # require ROLE_ADMIN for /usuaris*
+        - { path: ^/usuaris, roles: ROLE_ADMIN }
+        # require ROLE_ADMIN for /tasques*
+        - { path: ^/tasques, roles: ROLE_ADMIN }
+        # require ROLE_ADMIN for /subtasques*
+        - { path: ^/subtasques, roles: ROLE_ADMIN }
+        
+        - { path: ^/, roles: IS_AUTHENTICATED_ANONYMOUSLY }
+            #logout:
+            #  path: logout
+            #  target: /
             # activate different ways to authenticate
 
-            # https://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
-            #http_basic: ~
+            # http_basic: ~
+            # http://symfony.com/doc/current/security.html#a-configuring-how-your-users-will-authenticate
 
-            # https://symfony.com/doc/current/security/form_login_setup.html
-            #form_login: ~
+            # form_login: ~
+            # http://symfony.com/doc/current/cookbook/security/form_login_setup.html
+
+            #login:
+            #    path:     /login
+            #    defaults: { _controller: MiBundle:User:login }
+
+            #login_check:
+            #    path: /login_check
+            #logout:
+            #path: /logout

@@ -4,13 +4,14 @@ namespace pets\WebBundle\Entity;
 
 use Doctrine\ORM\Mapping as ORM;
 use Symfony\Component\Validator\Constraints as Assert;
+use Symfony\Component\Security\Core\User\UserInterface;
 /**
  * Usuaris
  *
  * @ORM\Table(name="usuaris")
  * @ORM\Entity
  */
-class Usuaris
+class Usuaris implements UserInterface
 {
     /**
      * @var integer
@@ -51,14 +52,14 @@ class Usuaris
     /**
      * @var string
      *
-     * @ORM\Column(name="perfil", type="text", length=65535, nullable=false)
+     * @ORM\Column(name="role", type="text", length=65535, nullable=false)
      * @Assert\Choice(
      *     choices = { "admin", "treballador", "booking" },
      *     message = "Nomes pots assignar el rol de admin, treballador o booking"
      * )
      */
-    private $perfil;
-    
+    private $role;
+
     /**
      * @var string
      *
@@ -66,7 +67,7 @@ class Usuaris
      * @Assert\NotBlank()     
      */
     private $password;
-    
+
     /**
      * @var string
      *
@@ -160,33 +161,33 @@ class Usuaris
     }
 
     /**
-     * Set perfil
+     * Set role
      *
-     * @param string $perfil
+     * @param string $role
      *
      * @return Usuaris
      */
-    public function setPerfil($perfil)
+    public function setRole($role)
     {
-        $this->perfil = $perfil;
+        $this->role = $role;
 
         return $this;
     }
 
     /**
-     * Get perfil
+     * Get role
      *
      * @return string
      */
-    public function getPerfil()
+    public function getRole()
     {
-        return $this->perfil;
+        return $this->role;
     }
-    
+
     /**
      * Set password
      *
-     * @param string $perfil
+     * @param string $role
      *
      * @return Usuaris
      */
@@ -206,8 +207,8 @@ class Usuaris
     {
         return $this->password;
     }
-    
-     /**
+
+    /**
      * Set departament
      *
      * @param string $departament
@@ -230,4 +231,30 @@ class Usuaris
     {
         return $this->departament;
     }
+
+    /**
+     * Get email/username
+     *
+     * @return string
+     */
+    public function getUsername()
+    {
+        return $this->email;
+    }
+
+    public function getSalt()
+    {
+        return null;
+    }
+
+    public function getRoles()
+    {
+        // En este caso definimos un rol fijo, en el caso de que tengamos un campo role en la tabla de la BBDD    tendríamos que hacer $this->getRole()
+        return array('ROLE_USER');
+    }
+
+    public function eraseCredentials()
+    {
+    }
+
 }

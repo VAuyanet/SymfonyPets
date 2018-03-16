@@ -38,7 +38,7 @@ class UsuarisController extends Controller
         $form->handleRequest($request);
 
         if ($form->isSubmitted() && $form->isValid()) {
-            $usuari->setPassword(md5($usuari->getPassword()));
+            $usuari->setPassword(crypt($usuari->getPassword()));
             $em = $this->getDoctrine()->getManager();
             $em->persist($usuari);
             $em->flush();

@@ -10,10 +10,19 @@ pets_web_usuaris:
 
 pets_web_homepage:
     path:     /
-    defaults: { _controller: petsWebBundle:FormsLogin:login }
+    defaults: { _controller: petsWebBundle:Default:index }
 pets_web_formUsuaris:
     path:     /formUsuaris
     defaults: { _controller: petsWebBundle:FormsUsuaris:create }
-#pets_web_formLogin:
-#    path:     /login
-#    defaults: { _controller: petsWebBundle:FormsLogin:login }
+pets_web_login:
+    path:     /login
+    defaults: { _controller: petsWebBundle:FormsLogin:login }
+pets_web_logued:
+    path:     /logued
+    defaults: { _controller: petsWebBundle:FormsLogin:logued }
+pets_web_logout:
+    path:     /logout
+    defaults: { _controller: petsWebBundle:FormsLogin:logout }
+#pets_web_checkLogin:
+#    path:     /checkLogin
+#    defaults: { _controller: petsWebBundle:FormsLogin:check }

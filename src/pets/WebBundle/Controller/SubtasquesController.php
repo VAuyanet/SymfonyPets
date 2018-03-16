@@ -119,6 +119,21 @@ class SubtasquesController extends Controller
             ->setAction($this->generateUrl('subtasques_delete', array('idSubtasca' => $subtasque->getIdsubtasca())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
+    }
+
+    public function llistaSubtasquesAction($id)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $titol="Llista subtasques";
+        $query = $entityManager->createQuery(
+            'SELECT s
+        FROM petsWebBundle:Subtasques s
+        WHERE s.idTasca= '.$id.' '
+        );
+        $subtasques = $query->getResult();  
+
+        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques ));
     }
 }
