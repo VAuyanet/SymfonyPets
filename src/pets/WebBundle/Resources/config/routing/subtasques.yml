@@ -1,6 +1,6 @@
 subtasques_index:
-    path:     /
-    defaults: { _controller: "petsWebBundle:Subtasques:index" }
+    path:     /{idTasca}
+    defaults: { _controller: "petsWebBundle:Subtasques:llistaSubtasques" }
     methods:  GET
 
 subtasques_show:

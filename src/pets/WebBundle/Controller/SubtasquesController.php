@@ -122,7 +122,7 @@ class SubtasquesController extends Controller
             ;
     }
 
-    public function llistaSubtasquesAction($id)
+    public function llistaSubtasquesAction($idTasca)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
@@ -130,10 +130,10 @@ class SubtasquesController extends Controller
         $query = $entityManager->createQuery(
             'SELECT s
         FROM petsWebBundle:Subtasques s
-        WHERE s.idTasca= '.$id.' '
+        WHERE s.idTasca= '.$idTasca.' '
         );
         $subtasques = $query->getResult();  
 
-        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques ));
+        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'id' => $idTasca ));
     }
 }
