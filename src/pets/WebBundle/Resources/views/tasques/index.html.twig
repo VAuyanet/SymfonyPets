@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Tasques list</h1>
+    <h1>Tasques</h1>
 
     <table>
         <thead>
@@ -31,10 +31,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">show</a>
+                            <a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">edit</a>
+                            <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -45,7 +45,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('tasques_new') }}">Create a new tasque</a>
+            <a href="{{ path('tasques_new') }}">Crear una nova tasca</a>
         </li>
     </ul>
 {% endblock %}

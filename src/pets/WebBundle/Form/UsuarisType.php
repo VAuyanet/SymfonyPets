@@ -21,7 +21,7 @@ class UsuarisType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('perfil', TextType::class)->add('password', PasswordType::class)->add('Departament', EntityType::class, array(
+        $builder->add('nom', TextType::class)->add('cognoms', TextType::class)->add('email', EmailType::class)->add('role', TextType::class)->add('password', PasswordType::class)->add('Departament', EntityType::class, array(
                 'class' => 'petsWebBundle:Departament',
                 'choice_label' => 'nom',
                 'multiple' => FALSE,

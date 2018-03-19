@@ -1,9 +1,9 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Subtasques list</h1>
+    <h1>Subtasques de&nbsp;&nbsp;<sub>"{{ titolTasca }}"</sub></h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Idsubtasca</th>
@@ -31,10 +31,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">show</a>
+                            <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">edit</a>
+                            <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -45,7 +45,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('subtasques_new') }}">Create a new subtasque</a>
+            <a href="{{ path('subtasques_new') }}">Crear una nova subtasca</a>
         </li>
     </ul>
 {% endblock %}

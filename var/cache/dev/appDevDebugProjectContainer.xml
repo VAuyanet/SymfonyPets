@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <container xmlns="http://symfony.com/schema/dic/services" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://symfony.com/schema/dic/services http://symfony.com/schema/dic/services/services-1.0.xsd">
   <parameters>
-    <parameter key="kernel.root_dir">/opt/lampp/htdocs/Symfony/SymfonyPets/app</parameter>
-    <parameter key="kernel.project_dir">/opt/lampp/htdocs/Symfony/SymfonyPets</parameter>
+    <parameter key="kernel.root_dir">/opt/lampp/htdocs/SymfonyPets/app</parameter>
+    <parameter key="kernel.project_dir">/opt/lampp/htdocs/SymfonyPets</parameter>
     <parameter key="kernel.environment">dev</parameter>
     <parameter key="kernel.debug">true</parameter>
     <parameter key="kernel.name">app</parameter>
-    <parameter key="kernel.cache_dir">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev</parameter>
-    <parameter key="kernel.logs_dir">/opt/lampp/htdocs/Symfony/SymfonyPets/var/logs</parameter>
+    <parameter key="kernel.cache_dir">/opt/lampp/htdocs/SymfonyPets/var/cache/dev</parameter>
+    <parameter key="kernel.logs_dir">/opt/lampp/htdocs/SymfonyPets/var/logs</parameter>
     <parameter key="kernel.bundles" type="collection">
       <parameter key="FrameworkBundle">Symfony\Bundle\FrameworkBundle\FrameworkBundle</parameter>
       <parameter key="SecurityBundle">Symfony\Bundle\SecurityBundle\SecurityBundle</parameter>
@@ -28,77 +28,77 @@
     <parameter key="kernel.bundles_metadata" type="collection">
       <parameter key="FrameworkBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\FrameworkBundle</parameter>
       </parameter>
       <parameter key="SecurityBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SecurityBundle</parameter>
       </parameter>
       <parameter key="TwigBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\TwigBundle</parameter>
       </parameter>
       <parameter key="MonologBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/monolog-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/monolog-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\MonologBundle</parameter>
       </parameter>
       <parameter key="SwiftmailerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/swiftmailer-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/swiftmailer-bundle</parameter>
         <parameter key="namespace">Symfony\Bundle\SwiftmailerBundle</parameter>
       </parameter>
       <parameter key="DoctrineBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/doctrine/doctrine-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/doctrine/doctrine-bundle</parameter>
         <parameter key="namespace">Doctrine\Bundle\DoctrineBundle</parameter>
       </parameter>
       <parameter key="SensioFrameworkExtraBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/sensio/framework-extra-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/sensio/framework-extra-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\FrameworkExtraBundle</parameter>
       </parameter>
       <parameter key="AppBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/src/AppBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/src/AppBundle</parameter>
         <parameter key="namespace">AppBundle</parameter>
       </parameter>
       <parameter key="VallbonaWebBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/src/Vallbona/WebBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/src/Vallbona/WebBundle</parameter>
         <parameter key="namespace">Vallbona\WebBundle</parameter>
       </parameter>
       <parameter key="petsWebBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle</parameter>
         <parameter key="namespace">pets\WebBundle</parameter>
       </parameter>
       <parameter key="DebugBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\DebugBundle</parameter>
       </parameter>
       <parameter key="WebProfilerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebProfilerBundle</parameter>
       </parameter>
       <parameter key="SensioDistributionBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/sensio/distribution-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/sensio/distribution-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\DistributionBundle</parameter>
       </parameter>
       <parameter key="SensioGeneratorBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/sensio/generator-bundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/sensio/generator-bundle</parameter>
         <parameter key="namespace">Sensio\Bundle\GeneratorBundle</parameter>
       </parameter>
       <parameter key="WebServerBundle" type="collection">
         <parameter key="parent">null</parameter>
-        <parameter key="path">/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle</parameter>
+        <parameter key="path">/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebServerBundle</parameter>
         <parameter key="namespace">Symfony\Bundle\WebServerBundle</parameter>
       </parameter>
     </parameter>
@@ -132,7 +132,7 @@
       <parameter key="gc_probability">1</parameter>
       <parameter key="use_strict_mode">true</parameter>
     </parameter>
-    <parameter key="session.save_path">/opt/lampp/htdocs/Symfony/SymfonyPets/var/sessions/dev</parameter>
+    <parameter key="session.save_path">/opt/lampp/htdocs/SymfonyPets/var/sessions/dev</parameter>
     <parameter key="session.metadata.update_threshold">0</parameter>
     <parameter key="form.type_extension.csrf.enabled">true</parameter>
     <parameter key="form.type_extension.csrf.field_name">_token</parameter>
@@ -143,13 +143,13 @@
       <parameter>twig</parameter>
     </parameter>
     <parameter key="validator.mapping.cache.prefix"></parameter>
-    <parameter key="validator.mapping.cache.file">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/validation.php</parameter>
+    <parameter key="validator.mapping.cache.file">/opt/lampp/htdocs/SymfonyPets/var/cache/dev/validation.php</parameter>
     <parameter key="validator.translation_domain">validators</parameter>
     <parameter key="profiler_listener.only_exceptions">false</parameter>
     <parameter key="profiler_listener.only_master_requests">false</parameter>
-    <parameter key="profiler.storage.dsn">file:/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/profiler</parameter>
+    <parameter key="profiler.storage.dsn">file:/opt/lampp/htdocs/SymfonyPets/var/cache/dev/profiler</parameter>
     <parameter key="debug.error_handler.throw_at">-1</parameter>
-    <parameter key="debug.container.dump">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
+    <parameter key="debug.container.dump">/opt/lampp/htdocs/SymfonyPets/var/cache/dev/appDevDebugProjectContainer.xml</parameter>
     <parameter key="router.options.generator_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</parameter>
     <parameter key="router.options.generator_dumper_class">Symfony\Component\Routing\Generator\Dumper\PhpGeneratorDumper</parameter>
@@ -161,7 +161,7 @@
     <parameter key="router.request_context.host">localhost</parameter>
     <parameter key="router.request_context.scheme">http</parameter>
     <parameter key="router.request_context.base_url"></parameter>
-    <parameter key="router.resource">/opt/lampp/htdocs/Symfony/SymfonyPets/app/config/routing_dev.yml</parameter>
+    <parameter key="router.resource">/opt/lampp/htdocs/SymfonyPets/app/config/routing_dev.yml</parameter>
     <parameter key="router.cache_class_prefix">appDevDebugProjectContainer</parameter>
     <parameter key="request_listener.http_port">80</parameter>
     <parameter key="request_listener.https_port">443</parameter>
@@ -177,7 +177,7 @@
     <parameter key="twig.form.resources" type="collection">
       <parameter>form_div_layout.html.twig</parameter>
     </parameter>
-    <parameter key="twig.default_path">/opt/lampp/htdocs/Symfony/SymfonyPets/templates</parameter>
+    <parameter key="twig.default_path">/opt/lampp/htdocs/SymfonyPets/templates</parameter>
     <parameter key="monolog.use_microseconds">true</parameter>
     <parameter key="monolog.swift_mailer.handlers" type="collection"/>
     <parameter key="monolog.handlers_to_channels" type="collection">
@@ -221,7 +221,7 @@
     <parameter key="swiftmailer.mailer.default.transport.smtp.timeout">30</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.source_ip">null</parameter>
     <parameter key="swiftmailer.mailer.default.transport.smtp.local_domain">null</parameter>
-    <parameter key="swiftmailer.spool.default.memory.path">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/swiftmailer/spool/default</parameter>
+    <parameter key="swiftmailer.spool.default.memory.path">/opt/lampp/htdocs/SymfonyPets/var/cache/dev/swiftmailer/spool/default</parameter>
     <parameter key="swiftmailer.mailer.default.spool.enabled">true</parameter>
     <parameter key="swiftmailer.mailer.default.plugin.impersonate">null</parameter>
     <parameter key="swiftmailer.mailer.default.single_address">null</parameter>
@@ -340,7 +340,7 @@
     <parameter key="doctrine.orm.second_level_cache.cache_configuration.class">Doctrine\ORM\Cache\CacheConfiguration</parameter>
     <parameter key="doctrine.orm.second_level_cache.regions_configuration.class">Doctrine\ORM\Cache\RegionsConfiguration</parameter>
     <parameter key="doctrine.orm.auto_generate_proxy_classes">true</parameter>
-    <parameter key="doctrine.orm.proxy_dir">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/doctrine/orm/Proxies</parameter>
+    <parameter key="doctrine.orm.proxy_dir">/opt/lampp/htdocs/SymfonyPets/var/cache/dev/doctrine/orm/Proxies</parameter>
     <parameter key="doctrine.orm.proxy_namespace">Proxies</parameter>
     <parameter key="web_profiler.debug_toolbar.position">bottom</parameter>
     <parameter key="web_profiler.debug_toolbar.intercept_redirects">false</parameter>
@@ -520,6 +520,39 @@
     <service id="AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
       <tag name="controller.service_arguments"/>
     </service>
+    <service id="pets\WebBundle\Controller\DefaultController" class="pets\WebBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\Controller\FormsLoginController" class="pets\WebBundle\Controller\FormsLoginController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\Controller\SecurityController" class="pets\WebBundle\Controller\SecurityController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\Controller\SubtasquesController" class="pets\WebBundle\Controller\SubtasquesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\Controller\TasquesController" class="pets\WebBundle\Controller\TasquesController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\Controller\UsuarisController" class="pets\WebBundle\Controller\UsuarisController" public="true" autowire="true" autoconfigure="true">
+      <tag name="controller.service_arguments"/>
+    </service>
+    <service id="pets\WebBundle\DependencyInjection\Configuration" class="pets\WebBundle\DependencyInjection\Configuration" public="false" autowire="true" autoconfigure="true"/>
+    <service id="pets\WebBundle\DependencyInjection\petsWebExtension" class="pets\WebBundle\DependencyInjection\petsWebExtension" public="false" autowire="true" autoconfigure="true"/>
+    <service id="pets\WebBundle\Form\LoginType" class="pets\WebBundle\Form\LoginType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="pets\WebBundle\Form\SubtasquesType" class="pets\WebBundle\Form\SubtasquesType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="pets\WebBundle\Form\TasquesType" class="pets\WebBundle\Form\TasquesType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="pets\WebBundle\Form\UsuarisType" class="pets\WebBundle\Form\UsuarisType" public="false" autowire="true" autoconfigure="true">
+      <tag name="form.type"/>
+    </service>
+    <service id="pets\WebBundle\petsWebBundle" class="pets\WebBundle\petsWebBundle" public="false" autowire="true" autoconfigure="true"/>
     <service id="controller_name_converter" class="Symfony\Bundle\FrameworkBundle\Controller\ControllerNameParser" public="false">
       <tag name="monolog.logger" channel="request"/>
       <argument type="service" id="kernel"/>
@@ -536,7 +569,7 @@
     </service>
     <service id="argument_resolver.service" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\ServiceValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-50"/>
-      <argument type="service" id="service_locator.huq8vyi"/>
+      <argument type="service" id="service_locator.yxbcfu3"/>
     </service>
     <service id="argument_resolver.default" class="Symfony\Component\HttpKernel\Controller\ArgumentResolver\DefaultValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="-100"/>
@@ -599,9 +632,9 @@
     <service id="filesystem" class="Symfony\Component\Filesystem\Filesystem" public="true"/>
     <service id="file_locator" class="Symfony\Component\HttpKernel\Config\FileLocator">
       <argument type="service" id="kernel"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/Resources</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app/Resources</argument>
       <argument type="collection">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/app</argument>
       </argument>
     </service>
     <service id="uri_signer" class="Symfony\Component\HttpKernel\UriSigner">
@@ -765,9 +798,14 @@
       <argument type="service" id="form.registry"/>
       <argument type="collection">
         <argument>Symfony\Component\Form\Extension\Core\Type</argument>
+        <argument>pets\WebBundle\Form</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type</argument>
       </argument>
       <argument type="collection">
+        <argument>pets\WebBundle\Form\LoginType</argument>
+        <argument>pets\WebBundle\Form\SubtasquesType</argument>
+        <argument>pets\WebBundle\Form\TasquesType</argument>
+        <argument>pets\WebBundle\Form\UsuarisType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\FormType</argument>
         <argument>Symfony\Component\Form\Extension\Core\Type\ChoiceType</argument>
         <argument>Symfony\Bridge\Doctrine\Form\Type\EntityType</argument>
@@ -815,7 +853,7 @@
       <argument></argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -844,7 +882,7 @@
       <tag name="monolog.logger" channel="cache"/>
       <argument></argument>
       <argument>0</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
@@ -905,14 +943,14 @@
       <argument type="service" id="translator.selector"/>
     </service>
     <service id="translator.selector" class="Symfony\Component\Translation\MessageSelector" public="false"/>
-    <service id="2_ServiceLocator~4__ndxb" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="2_ServiceLocator~fmz9vf0" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="session" type="service" id="session" on-invalid="ignore"/>
       </argument>
     </service>
-    <service id="1_NativeFileSessionHandler~4__ndxb" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/sessions/dev</argument>
+    <service id="1_NativeFileSessionHandler~fmz9vf0" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\NativeFileSessionHandler" public="false">
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/sessions/dev</argument>
     </service>
     <service id="session" class="Symfony\Component\HttpFoundation\Session\Session" public="true">
       <argument type="service" id="session.storage.native"/>
@@ -935,12 +973,12 @@
     <service id="session.flash_bag" class="Symfony\Component\HttpFoundation\Session\Flash\FlashBag" public="false"/>
     <service id="session.attribute_bag" class="Symfony\Component\HttpFoundation\Session\Attribute\AttributeBag" public="false"/>
     <service id="session.storage.mock_file" class="Symfony\Component\HttpFoundation\Session\Storage\MockFileSessionStorage" public="false">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/sessions</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/sessions</argument>
       <argument>MOCKSESSID</argument>
       <argument type="service" id="session.storage.metadata_bag"/>
     </service>
     <service id="session.handler.native_file" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\StrictSessionHandler" public="false">
-      <argument type="service" id="1_NativeFileSessionHandler~4__ndxb"/>
+      <argument type="service" id="1_NativeFileSessionHandler~fmz9vf0"/>
     </service>
     <service id="session.handler.write_check" class="Symfony\Component\HttpFoundation\Session\Storage\Handler\WriteCheckSessionHandler" public="false">
       <deprecated>The "%service_id%" service is deprecated since Symfony 3.4 and will be removed in 4.0. Use the `session.lazy_write` ini setting instead.</deprecated>
@@ -949,7 +987,7 @@
       <tag name="kernel.event_subscriber"/>
       <tag name="container.hot_path"/>
       <tag name="container.hot_path"/>
-      <argument type="service" id="2_ServiceLocator~4__ndxb"/>
+      <argument type="service" id="2_ServiceLocator~fmz9vf0"/>
     </service>
     <service id="session.save_listener" class="Symfony\Component\HttpKernel\EventListener\SaveSessionListener">
       <tag name="kernel.event_subscriber"/>
@@ -965,7 +1003,7 @@
       <argument type="service" id="request_stack" on-invalid="ignore"/>
     </service>
     <service id="form.resolved_type_factory" class="Symfony\Component\Form\Extension\DataCollector\Proxy\ResolvedTypeFactoryDataCollectorProxy">
-      <argument type="service" id="1_ResolvedFormTypeFactory~nc_6v_g"/>
+      <argument type="service" id="1_ResolvedFormTypeFactory~xirskob"/>
       <argument type="service" id="data_collector.form"/>
     </service>
     <service id="form.registry" class="Symfony\Component\Form\FormRegistry">
@@ -979,7 +1017,7 @@
       <argument type="service" id="form.resolved_type_factory"/>
     </service>
     <service id="form.extension" class="Symfony\Component\Form\Extension\DependencyInjection\DependencyInjectionExtension" public="false">
-      <argument type="service" id="service_locator.0blprly"/>
+      <argument type="service" id="service_locator.hxwhqdc"/>
       <argument type="collection">
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="iterator">
           <argument type="service" id="form.type_extension.form.http_foundation"/>
@@ -1195,12 +1233,12 @@
     <service id="templating.filename_parser" class="Symfony\Bundle\FrameworkBundle\Templating\TemplateFilenameParser"/>
     <service id="templating.locator" class="Symfony\Bundle\FrameworkBundle\Templating\Loader\TemplateLocator" public="false">
       <argument type="service" id="file_locator"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev</argument>
     </service>
     <service id="templating.finder" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplateFinder" public="false">
       <argument type="service" id="kernel"/>
       <argument type="service" id="templating.filename_parser"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/Resources</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app/Resources</argument>
     </service>
     <service id="templating.cache_warmer.template_paths" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\TemplatePathsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer" priority="20"/>
@@ -1224,13 +1262,13 @@
         <argument type="service" id="monolog.logger.templating" on-invalid="ignore"/>
       </call>
     </service>
-    <service id="2_ApcCache~1zl3r_m" class="Doctrine\Common\Cache\ApcCache" public="false">
+    <service id="2_ApcCache~eziikv4" class="Doctrine\Common\Cache\ApcCache" public="false">
       <call method="setNamespace">
         <argument></argument>
       </call>
     </service>
-    <service id="1_PhpArrayAdapter~1zl3r_m" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/validation.php</argument>
+    <service id="1_PhpArrayAdapter~eziikv4" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
@@ -1246,7 +1284,7 @@
       </call>
       <call method="addXmlMappings">
         <argument type="collection">
-          <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
+          <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Component/Form/Resources/config/validation.xml</argument>
         </argument>
       </call>
       <call method="enableAnnotationMapping">
@@ -1265,14 +1303,14 @@
     <service id="validator.mapping.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\ValidatorCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="validator.builder"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/validation.php</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/validation.php</argument>
       <argument type="service" id="cache.validator"/>
     </service>
     <service id="validator.mapping.cache.symfony" class="Symfony\Component\Validator\Mapping\Cache\Psr6Cache" public="false">
-      <argument type="service" id="1_PhpArrayAdapter~1zl3r_m"/>
+      <argument type="service" id="1_PhpArrayAdapter~eziikv4"/>
     </service>
     <service id="validator.mapping.cache.doctrine.apc" class="Symfony\Component\Validator\Mapping\Cache\DoctrineCache" public="false">
-      <argument type="service" id="2_ApcCache~1zl3r_m"/>
+      <argument type="service" id="2_ApcCache~eziikv4"/>
       <deprecated>The "%service_id%" service is deprecated since Symfony 3.4 and will be removed in 4.0. Use a Psr6 cache like "validator.mapping.cache.symfony" instead.</deprecated>
     </service>
     <service id="validator.validator_factory" class="Symfony\Component\Validator\ContainerConstraintValidatorFactory" public="false">
@@ -1350,7 +1388,7 @@
       </call>
     </service>
     <service id="profiler.storage" class="Symfony\Component\HttpKernel\Profiler\FileProfilerStorage" public="false">
-      <argument>file:/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/profiler</argument>
+      <argument>file:/opt/lampp/htdocs/SymfonyPets/var/cache/dev/profiler</argument>
     </service>
     <service id="profiler_listener" class="Symfony\Component\HttpKernel\EventListener\ProfilerListener">
       <tag name="kernel.event_subscriber"/>
@@ -1387,7 +1425,7 @@
       <tag name="data_collector" template="@WebProfiler/Collector/logger.html.twig" id="logger" priority="300"/>
       <tag name="monolog.logger" channel="profiler"/>
       <argument type="service" id="monolog.logger.profiler" on-invalid="ignore"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/appDevDebugProjectContainer</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/appDevDebugProjectContainer</argument>
     </service>
     <service id="data_collector.time" class="Symfony\Component\HttpKernel\DataCollector\TimeDataCollector" public="false">
       <tag name="data_collector" template="@WebProfiler/Collector/time.html.twig" id="time" priority="330"/>
@@ -1425,7 +1463,7 @@
         <argument type="service" id="cache.annotations"/>
       </call>
     </service>
-    <service id="1_ResolvedFormTypeFactory~nc_6v_g" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
+    <service id="1_ResolvedFormTypeFactory~xirskob" class="Symfony\Component\Form\ResolvedFormTypeFactory" public="false"/>
     <service id="form.type_extension.form.data_collector" class="Symfony\Component\Form\Extension\DataCollector\Type\DataCollectorTypeExtension" public="false">
       <tag name="form.type_extension" extended_type="Symfony\Component\Form\Extension\Core\Type\FormType" extended-type="Symfony\Component\Form\Extension\Core\Type\FormType"/>
       <argument type="service" id="data_collector.form"/>
@@ -1476,7 +1514,7 @@
     <service id="debug.file_link_formatter" class="Symfony\Component\HttpKernel\Debug\FileLinkFormatter" public="false">
       <argument>null</argument>
       <argument type="service" id="request_stack" on-invalid="ignore"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
       <argument>/_profiler/open?file=%%f&amp;line=%%l#line%%l</argument>
     </service>
     <service id="debug.stopwatch" class="Symfony\Component\Stopwatch\Stopwatch">
@@ -1897,9 +1935,9 @@
     </service>
     <service id="router.default" class="Symfony\Bundle\FrameworkBundle\Routing\Router" public="false">
       <argument type="service" id="service_container"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/config/routing_dev.yml</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app/config/routing_dev.yml</argument>
       <argument type="collection">
-        <argument key="cache_dir">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev</argument>
+        <argument key="cache_dir">/opt/lampp/htdocs/SymfonyPets/var/cache/dev</argument>
         <argument key="debug">true</argument>
         <argument key="generator_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
         <argument key="generator_base_class">Symfony\Component\Routing\Generator\UrlGenerator</argument>
@@ -1939,7 +1977,7 @@
       <argument type="service" id="request_stack"/>
       <argument type="service" id="router.request_context" on-invalid="ignore"/>
       <argument type="service" id="monolog.logger.request" on-invalid="ignore"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
       <argument>true</argument>
     </service>
     <service id="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" class="Symfony\Bundle\FrameworkBundle\Controller\RedirectController" public="true">
@@ -1965,12 +2003,12 @@
       <argument type="service" id="file_locator"/>
       <argument type="service" id="routing.loader.annotation"/>
     </service>
-    <service id="2_PhpArrayAdapter~hdtcgpw" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/annotations.php</argument>
+    <service id="2_PhpArrayAdapter~_vkqevg" class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" public="false">
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <factory class="Symfony\Component\Cache\Adapter\PhpArrayAdapter" method="create"/>
     </service>
-    <service id="1_ArrayCache~hdtcgpw" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
+    <service id="1_ArrayCache~_vkqevg" class="Doctrine\Common\Cache\ArrayCache" public="false"/>
     <service id="annotations.reader" class="Doctrine\Common\Annotations\AnnotationReader" public="false">
       <call method="addGlobalIgnoredName">
         <argument>required</argument>
@@ -1984,7 +2022,7 @@
     </service>
     <service id="annotations.cached_reader" class="Doctrine\Common\Annotations\CachedReader" public="false">
       <argument type="service" id="annotations.reader"/>
-      <argument type="service" id="1_ArrayCache~hdtcgpw"/>
+      <argument type="service" id="1_ArrayCache~_vkqevg"/>
       <argument>true</argument>
       <property name="cacheProviderBackup" type="service" id="annotations.cache"/>
     </service>
@@ -1994,19 +2032,19 @@
     <service id="annotations.cache_warmer" class="Symfony\Bundle\FrameworkBundle\CacheWarmer\AnnotationsCacheWarmer" public="false">
       <tag name="kernel.cache_warmer"/>
       <argument type="service" id="annotations.reader"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/annotations.php</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/annotations.php</argument>
       <argument type="service" id="cache.annotations"/>
       <argument>#^Symfony\\(?:Component\\HttpKernel\\|Bundle\\FrameworkBundle\\Controller\\(?!AbstractController$|Controller$))#</argument>
     </service>
     <service id="annotations.cache" class="Symfony\Component\Cache\DoctrineProvider" public="false">
-      <argument type="service" id="2_PhpArrayAdapter~hdtcgpw"/>
+      <argument type="service" id="2_PhpArrayAdapter~_vkqevg"/>
     </service>
     <service id="property_accessor" class="Symfony\Component\PropertyAccess\PropertyAccessor">
       <argument>false</argument>
       <argument>false</argument>
       <argument type="service" id="cache.property_access" on-invalid="ignore"/>
     </service>
-    <service id="1_ServiceLocator~ajkkwjo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="1_ServiceLocator~osa7b0f" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="security.authorization_checker" type="service" id="security.authorization_checker"/>
@@ -2023,7 +2061,7 @@
       <tag name="kernel.reset" method="setToken"/>
     </service>
     <service id="security.helper" class="Symfony\Component\Security\Core\Security" public="false">
-      <argument type="service" id="1_ServiceLocator~ajkkwjo"/>
+      <argument type="service" id="1_ServiceLocator~osa7b0f"/>
     </service>
     <service id="security.user_value_resolver" class="Symfony\Bundle\SecurityBundle\SecurityUserValueResolver" public="false">
       <tag name="controller.argument_value_resolver" priority="40"/>
@@ -2031,6 +2069,7 @@
     </service>
     <service id="security.authentication.manager" class="Symfony\Component\Security\Core\Authentication\AuthenticationProviderManager" public="false">
       <argument type="iterator">
+        <argument type="service" id="security.authentication.provider.dao.main"/>
         <argument type="service" id="security.authentication.provider.anonymous.main"/>
       </argument>
       <argument>true</argument>
@@ -2046,7 +2085,14 @@
       <argument>migrate</argument>
     </service>
     <service id="security.encoder_factory.generic" class="Symfony\Component\Security\Core\Encoder\EncoderFactory" public="false">
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument key="pets\WebBundle\Entity\Usuaris" type="collection">
+          <argument key="class">Symfony\Component\Security\Core\Encoder\BCryptPasswordEncoder</argument>
+          <argument key="arguments" type="collection">
+            <argument>13</argument>
+          </argument>
+        </argument>
+      </argument>
     </service>
     <service id="security.user_password_encoder.generic" class="Symfony\Component\Security\Core\Encoder\UserPasswordEncoder" public="false">
       <argument type="service" id="security.encoder_factory.generic"/>
@@ -2102,6 +2148,14 @@
       <argument type="service" id="request_stack" on-invalid="null"/>
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="security.token_storage" on-invalid="null"/>
+      <call method="registerListener">
+        <argument>main</argument>
+        <argument>/logout</argument>
+        <argument>logout</argument>
+        <argument>_csrf_token</argument>
+        <argument>null</argument>
+        <argument>null</argument>
+      </call>
     </service>
     <service id="security.user.provider.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false" abstract="true"/>
     <service id="security.user.provider.in_memory.user" class="Symfony\Component\Security\Core\User\User" public="false" abstract="true"/>
@@ -2147,12 +2201,41 @@
       <argument type="service" id="security.authentication.retry_entry_point"/>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
     </service>
-    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false"/>
+    <service id="security.access_map" class="Symfony\Component\Security\Http\AccessMap" public="false">
+      <call method="add">
+        <argument type="service" id="security.request_matcher.xqok8p."/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id="security.request_matcher.oadbmf6"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id="security.request_matcher.__hkg0h"/>
+        <argument type="collection">
+          <argument>ROLE_ADMIN</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+      <call method="add">
+        <argument type="service" id="security.request_matcher.nezwnly"/>
+        <argument type="collection">
+          <argument>IS_AUTHENTICATED_ANONYMOUSLY</argument>
+        </argument>
+        <argument>null</argument>
+      </call>
+    </service>
     <service id="security.context_listener" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <tag name="monolog.logger" channel="security"/>
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.symfonypets"/>
       </argument>
       <argument></argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2445,8 +2528,11 @@
       <argument type="service" id="debug.event_dispatcher"/>
       <argument type="service" id="security.logout_url_generator"/>
     </service>
-    <service id="security.user.provider.concrete.in_memory" class="Symfony\Component\Security\Core\User\InMemoryUserProvider" public="false">
-      <argument type="collection"/>
+    <service id="security.user.provider.concrete.symfonypets" class="Symfony\Bridge\Doctrine\Security\User\EntityUserProvider" public="false">
+      <argument type="service" id="doctrine"/>
+      <argument>petsWebBundle:Usuaris</argument>
+      <argument>email</argument>
+      <argument>null</argument>
     </service>
     <service id="security.firewall.map.config.dev" class="Symfony\Bundle\SecurityBundle\Security\FirewallConfig" public="false">
       <argument>dev</argument>
@@ -2476,12 +2562,15 @@
       <argument>null</argument>
       <argument>true</argument>
       <argument>false</argument>
-      <argument>security.user.provider.concrete.in_memory</argument>
+      <argument>security.user.provider.concrete.symfonypets</argument>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument>security.authentication.form_entry_point.main</argument>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="collection">
+        <argument>logout</argument>
+        <argument>form_login</argument>
+        <argument>http_basic</argument>
         <argument>anonymous</argument>
       </argument>
       <argument>null</argument>
@@ -2489,7 +2578,7 @@
     <service id="security.context_listener.0" class="Symfony\Component\Security\Http\Firewall\ContextListener" public="false">
       <argument type="service" id="security.token_storage"/>
       <argument type="iterator">
-        <argument type="service" id="security.user.provider.concrete.in_memory"/>
+        <argument type="service" id="security.user.provider.concrete.symfonypets"/>
       </argument>
       <argument>main</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2498,6 +2587,96 @@
       <call method="setLogoutOnUserChange">
         <argument>false</argument>
       </call>
+    </service>
+    <service id="security.logout_listener.main" class="Symfony\Component\Security\Http\Firewall\LogoutListener" public="false">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="service" id="security.logout.success_handler.main"/>
+      <argument type="collection">
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">logout</argument>
+        <argument key="logout_path">/logout</argument>
+      </argument>
+      <call method="addHandler">
+        <argument type="service" id="security.logout.handler.session"/>
+      </call>
+    </service>
+    <service id="security.logout.success_handler.main" class="Symfony\Component\Security\Http\Logout\DefaultLogoutSuccessHandler" public="false">
+      <argument type="service" id="security.http_utils"/>
+      <argument>/</argument>
+    </service>
+    <service id="security.authentication.provider.dao.main" class="Symfony\Component\Security\Core\Authentication\Provider\DaoAuthenticationProvider" public="false">
+      <argument type="service" id="security.user.provider.concrete.symfonypets"/>
+      <argument type="service" id="security.user_checker"/>
+      <argument>main</argument>
+      <argument type="service" id="security.encoder_factory.generic"/>
+      <argument>true</argument>
+    </service>
+    <service id="security.authentication.success_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationSuccessHandler" public="false">
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">pets_web_login</argument>
+          <argument key="default_target_path">pets_web_homepage</argument>
+          <argument key="always_use_default_target_path">false</argument>
+          <argument key="target_path_parameter">_target_path</argument>
+          <argument key="use_referer">false</argument>
+        </argument>
+      </call>
+      <call method="setProviderKey">
+        <argument>main</argument>
+      </call>
+    </service>
+    <service id="security.authentication.failure_handler.main.form_login" class="Symfony\Component\Security\Http\Authentication\DefaultAuthenticationFailureHandler" public="false">
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument type="collection"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <call method="setOptions">
+        <argument type="collection">
+          <argument key="login_path">pets_web_login</argument>
+          <argument key="failure_path">null</argument>
+          <argument key="failure_forward">false</argument>
+          <argument key="failure_path_parameter">_failure_path</argument>
+        </argument>
+      </call>
+    </service>
+    <service id="security.authentication.listener.form.main" class="Symfony\Component\Security\Http\Firewall\UsernamePasswordFormAuthenticationListener" public="false">
+      <tag name="security.remember_me_aware" id="main" provider="security.user.provider.concrete.symfonypets"/>
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.authentication.manager"/>
+      <argument type="service" id="security.authentication.session_strategy"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>main</argument>
+      <argument type="service" id="security.authentication.success_handler.main.form_login"/>
+      <argument type="service" id="security.authentication.failure_handler.main.form_login"/>
+      <argument type="collection">
+        <argument key="check_path">pets_web_login</argument>
+        <argument key="use_forward">false</argument>
+        <argument key="require_previous_session">false</argument>
+        <argument key="username_parameter">_username</argument>
+        <argument key="password_parameter">_password</argument>
+        <argument key="csrf_parameter">_csrf_token</argument>
+        <argument key="csrf_token_id">authenticate</argument>
+        <argument key="post_only">true</argument>
+      </argument>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
+      <argument type="service" id="debug.event_dispatcher" on-invalid="null"/>
+      <argument>null</argument>
+    </service>
+    <service id="security.authentication.form_entry_point.main" class="Symfony\Component\Security\Http\EntryPoint\FormAuthenticationEntryPoint" public="false">
+      <argument type="service" id="http_kernel"/>
+      <argument type="service" id="security.http_utils"/>
+      <argument>pets_web_login</argument>
+      <argument>false</argument>
+    </service>
+    <service id="security.authentication.listener.basic.main" class="Symfony\Component\Security\Http\Firewall\BasicAuthenticationListener" public="false">
+      <argument type="service" id="security.token_storage"/>
+      <argument type="service" id="security.authentication.manager"/>
+      <argument>main</argument>
+      <argument type="service" id="security.authentication.form_entry_point.main"/>
+      <argument type="service" id="monolog.logger.security" on-invalid="null"/>
     </service>
     <service id="security.authentication.listener.anonymous.main" class="Symfony\Component\Security\Http\Firewall\AnonymousAuthenticationListener" public="false">
       <argument type="service" id="security.token_storage"/>
@@ -2513,7 +2692,7 @@
       <argument type="service" id="security.authentication.trust_resolver"/>
       <argument type="service" id="security.http_utils"/>
       <argument>main</argument>
-      <argument>null</argument>
+      <argument type="service" id="security.authentication.form_entry_point.main"/>
       <argument>null</argument>
       <argument>null</argument>
       <argument type="service" id="monolog.logger.security" on-invalid="null"/>
@@ -2523,6 +2702,9 @@
       <argument type="iterator">
         <argument type="service" id="security.channel_listener"/>
         <argument type="service" id="security.context_listener.0"/>
+        <argument type="service" id="security.logout_listener.main"/>
+        <argument type="service" id="security.authentication.listener.form.main"/>
+        <argument type="service" id="security.authentication.listener.basic.main"/>
         <argument type="service" id="security.authentication.listener.anonymous.main"/>
         <argument type="service" id="security.access_listener"/>
       </argument>
@@ -2536,10 +2718,24 @@
         <argument key="security.firewall.map.context.main" type="service" id="security.firewall.map.context.main"/>
       </argument>
     </service>
+    <service id="security.request_matcher.xqok8p." class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/usuaris</argument>
+    </service>
+    <service id="security.request_matcher.oadbmf6" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/tasques</argument>
+    </service>
+    <service id="security.request_matcher.__hkg0h" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/subtasques</argument>
+    </service>
+    <service id="security.request_matcher.nezwnly" class="Symfony\Component\HttpFoundation\RequestMatcher" public="false">
+      <argument>^/login$</argument>
+    </service>
     <service id="security.command.user_password_encoder" class="Symfony\Bundle\SecurityBundle\Command\UserPasswordEncoderCommand" public="false">
       <tag name="console.command" command="security:encode-password"/>
       <argument type="service" id="security.encoder_factory.generic"/>
-      <argument type="collection"/>
+      <argument type="collection">
+        <argument>pets\WebBundle\Entity\Usuaris</argument>
+      </argument>
       <call method="setName">
         <argument>security:encode-password</argument>
       </call>
@@ -2554,9 +2750,9 @@
           <argument>form_div_layout.html.twig</argument>
         </argument>
         <argument key="autoescape">name</argument>
-        <argument key="cache">/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/twig</argument>
+        <argument key="cache">/opt/lampp/htdocs/SymfonyPets/var/cache/dev/twig</argument>
         <argument key="charset">UTF-8</argument>
-        <argument key="default_path">/opt/lampp/htdocs/Symfony/SymfonyPets/templates</argument>
+        <argument key="default_path">/opt/lampp/htdocs/SymfonyPets/templates</argument>
         <argument key="paths" type="collection"/>
         <argument key="date" type="collection">
           <argument key="format">F j, Y H:i</argument>
@@ -2650,14 +2846,14 @@
       <argument type="service" id="service_locator.c7_qahl.twig.cache_warmer"/>
       <argument type="service" id="templating.finder" on-invalid="ignore"/>
       <argument type="collection">
-        <argument key="/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form">null</argument>
+        <argument key="/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form">null</argument>
       </argument>
     </service>
     <service id="twig.template_iterator" class="Symfony\Bundle\TwigBundle\TemplateIterator" public="false">
       <argument type="service" id="kernel"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app</argument>
       <argument type="collection">
-        <argument key="/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form">null</argument>
+        <argument key="/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form">null</argument>
       </argument>
     </service>
     <service id="twig.template_cache_warmer" class="Symfony\Bundle\TwigBundle\CacheWarmer\TemplateCacheWarmer" public="false">
@@ -2669,84 +2865,84 @@
     </service>
     <service id="twig.loader.native_filesystem" class="Twig\Loader\FilesystemLoader" public="false">
       <argument type="collection"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>!Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
         <argument>VallbonaWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
         <argument>!VallbonaWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
         <argument>petsWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
         <argument>!petsWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="twig.loader.chain" class="Twig\Loader\ChainLoader" public="false"/>
@@ -2772,7 +2968,7 @@
     <service id="twig.extension.code" class="Symfony\Bridge\Twig\Extension\CodeExtension" public="false">
       <tag name="twig.extension"/>
       <argument type="service" id="debug.file_link_formatter" on-invalid="ignore"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app</argument>
       <argument>UTF-8</argument>
     </service>
     <service id="twig.extension.routing" class="Symfony\Bridge\Twig\Extension\RoutingExtension" public="false">
@@ -2853,84 +3049,84 @@
       <tag name="twig.loader"/>
       <argument type="service" id="templating.locator"/>
       <argument type="service" id="templating.name_parser"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/FrameworkBundle/Resources/views</argument>
         <argument>!Framework</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>Security</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/SecurityBundle/Resources/views</argument>
         <argument>!Security</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/TwigBundle/Resources/views</argument>
         <argument>!Twig</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/swiftmailer-bundle/Resources/views</argument>
         <argument>!Swiftmailer</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/doctrine/doctrine-bundle/Resources/views</argument>
         <argument>!Doctrine</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
         <argument>VallbonaWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/Vallbona/WebBundle/Resources/views</argument>
         <argument>!VallbonaWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
         <argument>petsWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle/Resources/views</argument>
         <argument>!petsWeb</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/DebugBundle/Resources/views</argument>
         <argument>!Debug</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bundle/WebProfilerBundle/Resources/views</argument>
         <argument>!WebProfiler</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/Resources/views</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/app/Resources/views</argument>
       </call>
       <call method="addPath">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/vendor/symfony/symfony/src/Symfony/Bridge/Twig/Resources/views/Form</argument>
       </call>
     </service>
     <service id="templating.engine.twig" class="Symfony\Bundle\TwigBundle\TwigEngine" public="false">
@@ -2941,7 +3137,7 @@
     <service id="twig.command.debug" class="Symfony\Bridge\Twig\Command\DebugCommand" public="false">
       <tag name="console.command" command="debug:twig"/>
       <argument type="service" id="twig"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
       <call method="setName">
         <argument>debug:twig</argument>
       </call>
@@ -2997,7 +3193,7 @@
     </service>
     <service id="monolog.processor.psr_log_message" class="Monolog\Processor\PsrLogMessageProcessor" public="false"/>
     <service id="monolog.handler.main" class="Monolog\Handler\StreamHandler">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/logs/dev.log</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/logs/dev.log</argument>
       <argument>100</argument>
       <argument>true</argument>
       <argument>null</argument>
@@ -3016,9 +3212,9 @@
       <argument>100</argument>
       <argument>true</argument>
     </service>
-    <service id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~s.jcurt" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
-    <service id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~s.jcurt" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
-    <service id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~s.jcurt" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
+    <service id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~5sasrqj" class="Swift_Transport_Esmtp_Auth_PlainAuthenticator" public="false"/>
+    <service id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~5sasrqj" class="Swift_Transport_Esmtp_Auth_LoginAuthenticator" public="false"/>
+    <service id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~5sasrqj" class="Swift_Transport_Esmtp_Auth_CramMd5Authenticator" public="false"/>
     <service id="swiftmailer.mailer.abstract" class="Swift_Mailer" public="true" abstract="true">
       <argument type="service" id="swiftmailer.mailer.default.transport.spool"/>
     </service>
@@ -3035,9 +3231,9 @@
     </service>
     <service id="swiftmailer.transport.authhandler.abstract" class="Swift_Transport_Esmtp_AuthHandler" public="false" abstract="true">
       <argument type="collection">
-        <argument type="service" id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~s.jcurt"/>
-        <argument type="service" id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~s.jcurt"/>
-        <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~s.jcurt"/>
+        <argument type="service" id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~5sasrqj"/>
+        <argument type="service" id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~5sasrqj"/>
+        <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~5sasrqj"/>
       </argument>
     </service>
     <service id="swiftmailer.transport.eventdispatcher.abstract" class="Swift_Events_SimpleEventDispatcher" public="false" abstract="true"/>
@@ -3049,7 +3245,7 @@
     <service id="swiftmailer.transport.smtp.abstract" class="Swift_Transport_EsmtpTransport" public="false" abstract="true"/>
     <service id="swiftmailer.transport.spool.abstract" class="Swift_Transport_SpoolTransport" public="false" abstract="true"/>
     <service id="swiftmailer.spool.file.abstract" class="Swift_FileSpool" public="false" abstract="true">
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/app/../data/swiftmailer/spool</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/app/../data/swiftmailer/spool</argument>
     </service>
     <service id="swiftmailer.spool.memory.abstract" class="Swift_MemorySpool" public="false" abstract="true"/>
     <service id="swiftmailer.email_sender.listener" class="Symfony\Bundle\SwiftmailerBundle\EventListener\EmailSenderListener">
@@ -3064,9 +3260,9 @@
     <service id="swiftmailer.mailer.default.transport.eventdispatcher" class="Swift_Events_SimpleEventDispatcher" public="false"/>
     <service id="swiftmailer.mailer.default.transport.authhandler" class="Swift_Transport_Esmtp_AuthHandler" public="false">
       <argument type="collection">
-        <argument type="service" id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~s.jcurt"/>
-        <argument type="service" id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~s.jcurt"/>
-        <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~s.jcurt"/>
+        <argument type="service" id="1_Swift_Transport_Esmtp_Auth_CramMd5Authenticator~5sasrqj"/>
+        <argument type="service" id="2_Swift_Transport_Esmtp_Auth_LoginAuthenticator~5sasrqj"/>
+        <argument type="service" id="3_Swift_Transport_Esmtp_Auth_PlainAuthenticator~5sasrqj"/>
       </argument>
       <call method="setUsername">
         <argument>null</argument>
@@ -3410,7 +3606,7 @@
         <argument type="service" id="doctrine.orm.default_metadata_driver"/>
       </call>
       <call method="setProxyDir">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/doctrine/orm/Proxies</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/doctrine/orm/Proxies</argument>
       </call>
       <call method="setProxyNamespace">
         <argument>Proxies</argument>
@@ -3440,7 +3636,7 @@
     <service id="doctrine.orm.default_annotation_metadata_driver" class="Doctrine\ORM\Mapping\Driver\AnnotationDriver" public="false">
       <argument type="service" id="annotations.cached_reader"/>
       <argument type="collection">
-        <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/src/pets/WebBundle/Entity</argument>
+        <argument>/opt/lampp/htdocs/SymfonyPets/src/pets/WebBundle/Entity</argument>
       </argument>
     </service>
     <service id="doctrine.orm.default_metadata_driver" class="Doctrine\Common\Persistence\Mapping\Driver\MappingDriverChain" public="false">
@@ -3451,17 +3647,17 @@
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_metadata_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_7901ae18295b5f50295a7510502913ab7bf85a425255c0abf14a099cbce71d3c</argument>
+        <argument>sf_orm_default_8142c09a02fff586857563f1763ae412cdf06d3cb5d3e07832b2106f70bbdc68</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_result_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_7901ae18295b5f50295a7510502913ab7bf85a425255c0abf14a099cbce71d3c</argument>
+        <argument>sf_orm_default_8142c09a02fff586857563f1763ae412cdf06d3cb5d3e07832b2106f70bbdc68</argument>
       </call>
     </service>
     <service id="doctrine_cache.providers.doctrine.orm.default_query_cache" class="Doctrine\Common\Cache\ArrayCache">
       <call method="setNamespace">
-        <argument>sf_orm_default_7901ae18295b5f50295a7510502913ab7bf85a425255c0abf14a099cbce71d3c</argument>
+        <argument>sf_orm_default_8142c09a02fff586857563f1763ae412cdf06d3cb5d3e07832b2106f70bbdc68</argument>
       </call>
     </service>
     <service id="doctrine.orm.default_entity_listener_resolver" class="Doctrine\Bundle\DoctrineBundle\Mapping\ContainerAwareEntityListenerResolver">
@@ -3613,7 +3809,7 @@
         </argument>
       </call>
     </service>
-    <service id="2_HtmlDumper~mj8mxwe" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
+    <service id="2_HtmlDumper~uhjcexu" class="Symfony\Component\VarDumper\Dumper\HtmlDumper" public="false">
       <argument>null</argument>
       <argument>UTF-8</argument>
       <argument>1</argument>
@@ -3624,7 +3820,7 @@
         </argument>
       </call>
     </service>
-    <service id="1_NonceGenerator~mj8mxwe" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
+    <service id="1_NonceGenerator~uhjcexu" class="Symfony\Bundle\WebProfilerBundle\Csp\NonceGenerator" public="false"/>
     <service id="web_profiler.controller.profiler" class="Symfony\Bundle\WebProfilerBundle\Controller\ProfilerController" public="true">
       <argument type="service" id="router.default" on-invalid="null"/>
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3632,7 +3828,7 @@
       <argument>%data_collector.templates%</argument>
       <argument>bottom</argument>
       <argument type="service" id="web_profiler.csp.handler"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets</argument>
     </service>
     <service id="web_profiler.controller.router" class="Symfony\Bundle\WebProfilerBundle\Controller\RouterController" public="true">
       <argument type="service" id="profiler" on-invalid="null"/>
@@ -3645,11 +3841,11 @@
       <argument>true</argument>
     </service>
     <service id="web_profiler.csp.handler" class="Symfony\Bundle\WebProfilerBundle\Csp\ContentSecurityPolicyHandler" public="false">
-      <argument type="service" id="1_NonceGenerator~mj8mxwe"/>
+      <argument type="service" id="1_NonceGenerator~uhjcexu"/>
     </service>
     <service id="twig.extension.webprofiler" class="Symfony\Bundle\WebProfilerBundle\Twig\WebProfilerExtension" public="false">
       <tag name="twig.extension"/>
-      <argument type="service" id="2_HtmlDumper~mj8mxwe"/>
+      <argument type="service" id="2_HtmlDumper~uhjcexu"/>
     </service>
     <service id="web_profiler.debug_toolbar" class="Symfony\Bundle\WebProfilerBundle\EventListener\WebDebugToolbarListener">
       <tag name="kernel.event_subscriber"/>
@@ -3672,7 +3868,7 @@
     </service>
     <service id="web_server.command.server_run" class="Symfony\Bundle\WebServerBundle\Command\ServerRunCommand" public="false">
       <tag name="console.command" command="server:run"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/public</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:run</argument>
@@ -3680,7 +3876,7 @@
     </service>
     <service id="web_server.command.server_start" class="Symfony\Bundle\WebServerBundle\Command\ServerStartCommand" public="false">
       <tag name="console.command" command="server:start"/>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/public</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/public</argument>
       <argument>dev</argument>
       <call method="setName">
         <argument>server:start</argument>
@@ -3706,13 +3902,82 @@
     </service>
     <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
     <service id="abstract.instanceof.AppBundle\Controller\DefaultController" class="AppBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\DefaultController" class="pets\WebBundle\Controller\DefaultController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\DefaultController" class="pets\WebBundle\Controller\DefaultController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\FormsLoginController" class="pets\WebBundle\Controller\FormsLoginController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\FormsLoginController" class="pets\WebBundle\Controller\FormsLoginController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\SecurityController" class="pets\WebBundle\Controller\SecurityController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\SecurityController" class="pets\WebBundle\Controller\SecurityController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\SubtasquesController" class="pets\WebBundle\Controller\SubtasquesController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\SubtasquesController" class="pets\WebBundle\Controller\SubtasquesController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\TasquesController" class="pets\WebBundle\Controller\TasquesController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\TasquesController" class="pets\WebBundle\Controller\TasquesController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Bundle\FrameworkBundle\Controller\Controller.0.pets\WebBundle\Controller\UsuarisController" class="pets\WebBundle\Controller\UsuarisController" public="true" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Controller\UsuarisController" class="pets\WebBundle\Controller\UsuarisController" public="true" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.pets\WebBundle\Form\LoginType" class="pets\WebBundle\Form\LoginType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Form\LoginType" class="pets\WebBundle\Form\LoginType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.pets\WebBundle\Form\SubtasquesType" class="pets\WebBundle\Form\SubtasquesType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Form\SubtasquesType" class="pets\WebBundle\Form\SubtasquesType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.pets\WebBundle\Form\TasquesType" class="pets\WebBundle\Form\TasquesType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Form\TasquesType" class="pets\WebBundle\Form\TasquesType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
+    <service id="instanceof.Symfony\Component\Form\FormTypeInterface.0.pets\WebBundle\Form\UsuarisType" class="pets\WebBundle\Form\UsuarisType" public="false" autowire="true" abstract="true"/>
+    <service id="abstract.instanceof.pets\WebBundle\Form\UsuarisType" class="pets\WebBundle\Form\UsuarisType" public="false" autowire="true" autoconfigure="true" abstract="true"/>
     <service id="service_locator.f4ewnep" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
     </service>
-    <service id="service_locator.huq8vyi" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.uge1ptr" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection"/>
+    </service>
+    <service id="service_locator.c0psvuq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="authUtils" type="service" id="security.authentication_utils" on-invalid="ignore"/>
+      </argument>
+    </service>
+    <service id="service_locator.hgrsxl." class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.av6wthd" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.bhkty.c" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.cveyy6q" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.5y3lslh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.aapmmyo" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.g5lnolh" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.botkqoq" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.uhledmc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection"/>
+    </service>
+    <service id="service_locator.yxbcfu3" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+      <tag name="container.service_locator"/>
+      <argument type="collection">
+        <argument key="pets\WebBundle\Controller\SecurityController:loginAction" type="service" id="service_locator.c0psvuq"/>
+        <argument key="pets\WebBundle\Controller\SecurityController::loginAction" type="service" id="service_locator.c0psvuq"/>
+      </argument>
     </service>
     <service id="console.command_loader" class="Symfony\Component\Console\CommandLoader\ContainerCommandLoader" public="true">
       <argument type="service" id="service_locator.iv.jde6"/>
@@ -3821,12 +4086,16 @@
         <argument key="inline" type="service" id="fragment.renderer.inline"/>
       </argument>
     </service>
-    <service id="service_locator.0blprly" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
+    <service id="service_locator.hxwhqdc" class="Symfony\Component\DependencyInjection\ServiceLocator" public="false">
       <tag name="container.service_locator"/>
       <argument type="collection">
         <argument key="Symfony\Bridge\Doctrine\Form\Type\EntityType" type="service" id="form.type.entity"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\ChoiceType" type="service" id="form.type.choice"/>
         <argument key="Symfony\Component\Form\Extension\Core\Type\FormType" type="service" id="form.type.form"/>
+        <argument key="pets\WebBundle\Form\LoginType" type="service" id="pets\WebBundle\Form\LoginType"/>
+        <argument key="pets\WebBundle\Form\SubtasquesType" type="service" id="pets\WebBundle\Form\SubtasquesType"/>
+        <argument key="pets\WebBundle\Form\TasquesType" type="service" id="pets\WebBundle\Form\TasquesType"/>
+        <argument key="pets\WebBundle\Form\UsuarisType" type="service" id="pets\WebBundle\Form\UsuarisType"/>
       </argument>
     </service>
     <service id="monolog.logger.request" class="Symfony\Bridge\Monolog\Logger">
@@ -4036,42 +4305,42 @@
       </argument>
     </service>
     <service id="cache.app.recorder_inner" class="Symfony\Component\Cache\Adapter\FilesystemAdapter" public="false">
-      <argument>VrdbYnPBBT</argument>
+      <argument>KXCZfFbMzu</argument>
       <argument>0</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <call method="setLogger">
         <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       </call>
     </service>
     <service id="cache.system.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>apiSVK7qaa</argument>
+      <argument>Oa7N8YckaK</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.validator.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>vKVToVW4YK</argument>
+      <argument>gm0HFQ+19V</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.serializer.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>HV2c589uGW</argument>
+      <argument>ht87H3c9Dw</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
     <service id="cache.annotations.recorder_inner" class="Symfony\Component\Cache\Adapter\AdapterInterface" public="false">
-      <argument>hAMWysKtE-</argument>
+      <argument>5-usuJ-O1j</argument>
       <argument>0</argument>
       <argument>%container.build_id%</argument>
-      <argument>/opt/lampp/htdocs/Symfony/SymfonyPets/var/cache/dev/pools</argument>
+      <argument>/opt/lampp/htdocs/SymfonyPets/var/cache/dev/pools</argument>
       <argument type="service" id="monolog.logger.cache" on-invalid="ignore"/>
       <factory class="Symfony\Component\Cache\Adapter\AbstractAdapter" method="createSystemCache"/>
     </service>
@@ -4182,8 +4451,8 @@
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_flushcommand" alias="doctrine_cache.flush_command" public="true"/>
     <service id="console.command.doctrine_bundle_doctrinecachebundle_command_statscommand" alias="doctrine_cache.stats_command" public="true"/>
     <service id="twig.loader" alias="twig.loader.filesystem"/>
-    <service id="service_locator._fpuy7b" alias="2_ServiceLocator~4__ndxb" public="false"/>
-    <service id="service_locator.ml7rum7" alias="1_ServiceLocator~ajkkwjo" public="false"/>
+    <service id="service_locator._fpuy7b" alias="2_ServiceLocator~fmz9vf0" public="false"/>
+    <service id="service_locator.ml7rum7" alias="1_ServiceLocator~osa7b0f" public="false"/>
     <service id="validator" alias="debug.validator" public="true"/>
     <service id="event_dispatcher" alias="debug.event_dispatcher" public="true"/>
     <service id="controller_resolver" alias="debug.controller_resolver" public="false"/>

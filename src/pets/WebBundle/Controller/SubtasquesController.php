@@ -133,7 +133,14 @@ class SubtasquesController extends Controller
         WHERE s.idTasca= '.$idTasca.' '
         );
         $subtasques = $query->getResult();  
-
-        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'id' => $idTasca ));
+        $sql = $entityManager->createQuery(
+            'SELECT t.titol
+        FROM petsWebBundle:Tasques t
+        WHERE t.idTasca= '.$idTasca.' '
+        );
+        $titolTasca = $sql->getResult();
+//        print_r($titolTasca); 
+//        die();
+        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'] ));
     }
 }

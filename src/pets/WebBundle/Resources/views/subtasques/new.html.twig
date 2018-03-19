@@ -1,16 +1,16 @@
 {% extends 'base.html.twig' %}
 
 {% block content %}
-    <h1>Subtasques creation</h1>
+    <h1>Creació de Subtasca</h1>
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Create" />
+        <input type="submit" value="Crear" />
     {{ form_end(form) }}
 
     <ul>
         <li>
-            <a href="{{ path('subtasques_index') }}">Back to the list</a>
+            <a href="{{ path('subtasques_index') }}">Tornar a la llista</a>
         </li>
     </ul>
 {% endblock %}

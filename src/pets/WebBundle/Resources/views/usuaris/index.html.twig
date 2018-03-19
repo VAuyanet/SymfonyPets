@@ -1,7 +1,7 @@
 {% extends 'base.html.twig' %}
 
 {% block body %}
-    <h1>Usuaris list</h1>
+    <h1>Usuaris</h1>
 
     <table>
         <thead>
@@ -29,10 +29,10 @@
                 <td>
                     <ul>
                         <li>
-                            <a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">show</a>
+                            <a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">Mostrar</a>
                         </li>
                         <li>
-                            <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">edit</a>
+                            <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a>
                         </li>
                     </ul>
                 </td>
@@ -43,7 +43,7 @@
 
     <ul>
         <li>
-            <a href="{{ path('usuaris_new') }}">Create a new usuari</a>
+            <a href="{{ path('usuaris_new') }}">Crear un nou usuari</a>
         </li>
     </ul>
 {% endblock %}
