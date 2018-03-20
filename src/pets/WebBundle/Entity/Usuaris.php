@@ -54,8 +54,8 @@ class Usuaris implements UserInterface
      *
      * @ORM\Column(name="role", type="text", length=65535, nullable=false)
      * @Assert\Choice(
-     *     choices = { "admin", "treballador", "booking" },
-     *     message = "Nomes pots assignar el rol de admin, treballador o booking"
+     *     choices = { "ADMIN", "TREBALLADOR", "CONTINGUT" },
+     *     message = "Nomes pots assignar el rol de ADMIN, TREBALLADOR o CONTINGUT (en majuscules)"
      * )
      */
     private $role;
@@ -250,8 +250,8 @@ class Usuaris implements UserInterface
     public function getRoles()
     {
         // En este caso definimos un rol fijo, en el caso de que tengamos un campo role en la tabla de la BBDD    tendríamos que hacer $this->getRole()
-//        return array('ROLE_ADMIN','ROLE_TREBALLADOR','ROLE_CONTINGUT');
-        return ['ROLE_ADMIN'];
+        return array('ROLE_ADMIN','ROLE_TREBALLADOR','ROLE_CONTINGUT');
+//        return ['ROLE_ADMIN'];
     }
 
     public function eraseCredentials()
