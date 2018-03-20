@@ -6,6 +6,7 @@
         {% block stylesheets %}{% endblock %}
         <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
         <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+        <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.8/css/all.css" integrity="sha384-3AB7yXWz4OeoZcPbieVW64vVXEwADiYyAEhwilzWsLw+9FgqpyjjStpPnpBO8o8S" crossorigin="anonymous">
         <link rel="stylesheet" type="text/css" href="{{ asset('css/global.css') }}">
     </head>
     <body>
@@ -25,28 +26,28 @@
                                 <div class="collapse navbar-collapse" id="navbarNavDropdown">
                                     <ul class="navbar-nav">
                                         <li class="nav-item active">
-                                            <a class="nav-link" href="#">Home <span class="sr-only">(current)</span></a>
+                                            <a class="nav-link" href="{{ path('pets_web_homepage')}}"><i class="fas fa-home"></i>&nbsp;<span class="sr-only">(current)</span></a>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Tasques
+                                                <i class="fas fa-list"></i>&nbsp;Tasques
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-                                                <a class="dropdown-item" href="{{ path('tasques_new') }}">Crear tasca</a>
-                                                <a class="dropdown-item" href="{{ path('tasques_index') }}">Llistar tasques</a>
+                                                <a class="dropdown-item" href="{{ path('tasques_new') }}"><i class="far fa-calendar-plus"></i>&nbsp;Crear tasca</a>
+                                                <a class="dropdown-item" href="{{ path('tasques_index') }}"><i class="fas fa-tasks"></i>&nbsp;Llistar tasques</a>
                                             </div>
                                         </li>
                                         <li class="nav-item dropdown">
                                             <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLinkUsuaris" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-                                                Usuaris
+                                                <i class="fas fa-users"></i>&nbsp;Usuaris
                                             </a>
                                             <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLinkUsuaris">
-                                                <a class="dropdown-item" href="{{ path('usuaris_new') }}">Crear usuari</a>
-                                                <a class="dropdown-item" href="{{ path('usuaris_index') }}">Llistar usuaris</a>
+                                                <a class="dropdown-item" href="{{ path('usuaris_new') }}"><i class="fas fa-user-plus"></i>&nbsp;Crear usuari</a>
+                                                <a class="dropdown-item" href="{{ path('usuaris_index') }}"><i class="fas fa-address-book"></i>&nbsp;Llistar usuaris</a>
                                             </div>
                                         </li>
                                         <li>
-                                            <a class="nav-link" href="{{ path('pets_web_logout') }}">Logout</a>
+                                            <a class="nav-link" href="{{ path('pets_web_logout') }}"><i class="fas fa-sign-out-alt"></i>&nbsp;Logout</a>
                                         </li>
                                     </ul>
                                 </div>
