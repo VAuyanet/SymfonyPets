@@ -121,4 +121,25 @@ class TasquesController extends Controller
             ->getForm()
         ;
     }
+    
+    public function llistaTasquesDepartamentAction($idDepartament)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $titol="Llista tasques departament X";
+        $query = $entityManager->createQuery(
+            'SELECT t
+        FROM petsWebBundle:Tasques t
+        WHERE t.departament= '.$idDepartament.' '
+        );
+        $tasques = $query->getResult();  
+        $sql = $entityManager->createQuery(
+            'SELECT d.nom
+        FROM petsWebBundle:Departament d
+        WHERE d.idDepartament= '.$idDepartament.' '
+        );
+        $nomDepartament = $sql->getResult();
+
+        return $this->render('petsWebBundle:tasques:index.html.twig', array( 'titol' => $titol, 'tasques' =>$tasques, 'nomDepartament' => $nomDepartament[0]['nom'] ));
+    }
 }

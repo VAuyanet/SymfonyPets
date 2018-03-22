@@ -122,4 +122,25 @@ class UsuarisController extends Controller
             ->getForm()
         ;
     }
+    
+    public function llistaUsuarisDepartamentAction($idDepartament)
+    {
+        $entityManager = $this->getDoctrine()->getManager();
+
+        $titol="Llista usuaris departament X";
+        $query = $entityManager->createQuery(
+            'SELECT t
+        FROM petsWebBundle:Usuaris t
+        WHERE t.departament= '.$idDepartament.' '
+        );
+        $usuaris = $query->getResult();  
+        $sql = $entityManager->createQuery(
+            'SELECT d.nom
+        FROM petsWebBundle:Departament d
+        WHERE d.idDepartament= '.$idDepartament.' '
+        );
+        $nomDepartament = $sql->getResult();
+
+        return $this->render('petsWebBundle:usuaris:index.html.twig', array( 'titol' => $titol, 'usuaris' =>$usuaris, 'nomDepartament' => $nomDepartament[0]['nom'] ));
+    }
 }

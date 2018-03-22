@@ -22,3 +22,8 @@ tasques_delete:
     path:     /{idTasca}/delete
     defaults: { _controller: "petsWebBundle:Tasques:delete" }
     methods:  DELETE
+
+tasques_departament:
+    path:     /departament/{idDepartament}
+    defaults: { _controller: "petsWebBundle:Tasques:llistaTasquesDepartament" }
+    methods:  GET

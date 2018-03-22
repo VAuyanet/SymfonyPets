@@ -25,7 +25,7 @@
                 <td>{{ usuari.email }}</td>
                 <td>{{ usuari.role }}</td>
                 <td>{{ usuari.password }}</td>
-                <td>{{ usuari.departament }}</td>
+                <td><a href="{{ path('usuaris_departament', {'idDepartament': usuari.departament}) }}">{{ usuari.departament }}</a></td>
                 <td>
                     <ul>
                         <li>

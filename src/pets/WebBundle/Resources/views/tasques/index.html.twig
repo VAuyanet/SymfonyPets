@@ -27,7 +27,7 @@
                 <td>{% if tasque.dataFinal %}{{ tasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ tasque.estat }}</td>
                 <td>{{ tasque.prioritat }}</td>
-                <td>{{ tasque.departament }}</td>
+                <td><a href="{{ path('tasques_departament', {'idDepartament': tasque.departament}) }}">{{ tasque.departament }}</a></td>
                 <td>
                     <ul>
                         <li>

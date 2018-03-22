@@ -32,13 +32,13 @@ security:
     access_control:
        
         # require ROLE_ADMIN for /usuaris*
-        - { path: ^/usuaris$, roles: [ROLE_DISSENY,ROLE_CONTINGUT] }
+        - { path: ^/usuaris/$, roles: [ROLE_ADMIN,ROLE_DISSENY,ROLE_CONTINGUT] }
         - { path: ^/usuaris, roles: ROLE_ADMIN }
         # require ROLE_ADMIN for /tasques*
-        - { path: ^/tasques$, roles: [ROLE_DISSENY,ROLE_CONTINGUT] }
+        - { path: ^/tasques/$, roles: [ROLE_ADMIN,ROLE_DISSENY,ROLE_CONTINGUT] }
         - { path: ^/tasques, roles: ROLE_ADMIN }
         # require ROLE_ADMIN for /subtasques*
-        - { path: ^/subtasques$, roles: [ROLE_DISSENY,ROLE_CONTINGUT] }
+        - { path: ^/subtasques/$, roles: [ROLE_ADMIN,ROLE_DISSENY,ROLE_CONTINGUT] }
         - { path: ^/subtasques, roles: ROLE_ADMIN }
         
         - { path: ^/$, roles: [ROLE_ADMIN, ROLE_DISSENY,ROLE_CONTINGUT] }

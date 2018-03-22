@@ -22,3 +22,8 @@ usuaris_delete:
     path:     /{idUsuari}/delete
     defaults: { _controller: "petsWebBundle:Usuaris:delete" }
     methods:  DELETE
+    
+usuaris_departament:
+    path:     /departament/{idDepartament}
+    defaults: { _controller: "petsWebBundle:Usuaris:llistaUsuarisDepartament" }
+    methods:  GET
