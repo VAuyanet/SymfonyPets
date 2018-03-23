@@ -1,6 +1,7 @@
 <?php
 
 namespace pets\WebBundle\Controller;
+namespace Doctrine\ORM;
 
 use pets\WebBundle\Entity\Tasques;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -19,8 +20,21 @@ class TasquesController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
+        //
+        //        //        $tasques = $em->getRepository('petsWebBundle:Tasques')->findAll();
+        //        $query = $em->createQuery(
+        //        'SELECT t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, t.departament
+        //        FROM petsWebBundle:Tasques t
+        //        INNER JOIN petsWebBundle:Departament d ON d.id_departament = t.departament 
+        //        
+        //        ');
+        //        $tasques = $query->getResult();  
 
-        $tasques = $em->getRepository('petsWebBundle:Tasques')->findAll();
+        $q = Doctrine_Query::create()
+            ->select('t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, d.nom')
+            ->from('Tasques t')
+            ->innerJoin('t.Departament d');
+            $tasques = $q->getSqlQuery();
 
         return $this->render('petsWebBundle:tasques:index.html.twig', array(
             'tasques' => $tasques,
@@ -119,9 +133,9 @@ class TasquesController extends Controller
             ->setAction($this->generateUrl('tasques_delete', array('idTasca' => $tasque->getIdtasca())))
             ->setMethod('DELETE')
             ->getForm()
-        ;
+            ;
     }
-    
+
     public function llistaTasquesDepartamentAction($idDepartament)
     {
         $entityManager = $this->getDoctrine()->getManager();

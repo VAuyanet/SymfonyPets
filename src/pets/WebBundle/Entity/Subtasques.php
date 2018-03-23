@@ -74,7 +74,7 @@ class Subtasques
     private $idTasca;
 
 
-   
+
     /**
      * Get idSubtasca
      *
@@ -232,11 +232,12 @@ class Subtasques
     /**
      * Set idTasca
      *
-     * @param \pets\WebBundle\Entity\Tasques $idTasca
+     * @param string $idTasca
      *
      * @return Subtasques
      */
-    public function setIdTasca(\pets\WebBundle\Entity\Tasques $idTasca = null)
+    //    public function setIdTasca(\pets\WebBundle\Entity\Tasques $idTasca = null)
+    public function setIdTasca($idTasca)
     {
         $this->idTasca = $idTasca;
 

@@ -38,7 +38,7 @@ class SubtasquesController extends Controller
         $form->handleRequest($request);
 //        var_dump($request);
 //        die();
-//        $subtasque->setIdTasca());
+        $subtasque->setIdTasca($idTasca);
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
