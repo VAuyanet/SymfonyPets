@@ -11,6 +11,7 @@ use Symfony\Component\Form\Extension\Core\Type\SubmitType;
 use Symfony\Component\Form\Extension\Core\Type\DateType;
 use Symfony\Component\Form\Extension\Core\Type\EmailType;
 use Symfony\Component\Form\Extension\Core\Type\PasswordType;
+use Symfony\Component\Form\Extension\Core\Type\HiddenType;
 use Symfony\Bridge\Doctrine\Form\Type\EntityType;
 use pets\WebBundle\Entity\Usuaris;
 //TextType, TextareaType, SubmitType, etc. 
@@ -27,7 +28,9 @@ class SubtasquesType extends AbstractType
                 'multiple' => FALSE,
                 'label_attr'=> array('class' => 'labelT'), 
                 'attr' => array('class' => 'form-control')
-                ))->add('idTasca', TextType::class);
+                ))->add('idTasca', HiddenType::class);
+        $form = $builder->getForm();
+        $form->get('idTasca')->setData('idTasca');
     }/**
      * {@inheritdoc}
      */

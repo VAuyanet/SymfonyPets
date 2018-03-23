@@ -31,11 +31,14 @@ class SubtasquesController extends Controller
      * Creates a new subtasque entity.
      *
      */
-    public function newAction(Request $request)
+    public function newAction(Request $request, $idTasca)
     {
         $subtasque = new Subtasques();
         $form = $this->createForm('pets\WebBundle\Form\SubtasquesType', $subtasque);
         $form->handleRequest($request);
+//        var_dump($request);
+//        die();
+//        $subtasque->setIdTasca());
 
         if ($form->isSubmitted() && $form->isValid()) {
             $em = $this->getDoctrine()->getManager();
@@ -48,6 +51,7 @@ class SubtasquesController extends Controller
         return $this->render('petsWebBundle:subtasques:new.html.twig', array(
             'subtasque' => $subtasque,
             'form' => $form->createView(),
+            'idTasca' => $idTasca
         ));
     }
 
@@ -140,9 +144,9 @@ class SubtasquesController extends Controller
         );
         $titolTasca = $sql->getResult();
 
-        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'] ));
+        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'], 'idTasca' => $idTasca ));
     }
-    
+
     public function llistaSubtasquesUsuariAction($idTasca)
     {
         $entityManager = $this->getDoctrine()->getManager();
@@ -160,8 +164,8 @@ class SubtasquesController extends Controller
         WHERE t.idTasca= '.$idTasca.' '
         );
         $titolTasca = $sql->getResult();
-//        print_r($titolTasca); 
-//        die();
+        //        print_r($titolTasca); 
+        //        die();
         return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'] ));
     }
 }

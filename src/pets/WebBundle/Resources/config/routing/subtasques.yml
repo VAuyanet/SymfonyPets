@@ -19,7 +19,7 @@ subtasques_show:
     methods:  GET
 
 subtasques_new:
-    path:     /new
+    path:     /{idTasca}/new
     defaults: { _controller: "petsWebBundle:Subtasques:new" }
     methods:  [GET, POST]
 

@@ -45,7 +45,8 @@
 
     <ul>
         <li>
-            <a href="{{ path('subtasques_new') }}">Crear una nova subtasca</a>
+<!--            <a href="{#{ path('subtasques_new', { 'idTasca': idTasca }) }#}">Crear una nova subtasca</a>-->
+            <a href="subtasques_new/{{ idTasca }}">Crear una nova subtasca</a>
         </li>
     </ul>
 {% endblock %}
