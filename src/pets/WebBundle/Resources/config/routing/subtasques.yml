@@ -4,7 +4,7 @@ subtasques_index:
     methods:  GET
 
 subtasques_usuaris:
-    path:     /tasca/{idTasca}
+    path:     /tasca/{idUsuari}
     defaults: { _controller: "petsWebBundle:Subtasques:llistaSubtasquesUsuari" }
     methods:  GET
 

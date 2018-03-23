@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Usuaris</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Idusuari</th>
@@ -27,14 +27,12 @@
                 <td>{{ usuari.password }}</td>
                 <td><a href="{{ path('usuaris_departament', {'idDepartament': usuari.departament}) }}">{{ usuari.departament }}</a></td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a>
-                        </li>
-                    </ul>
+                    <div>
+                        <a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">Mostrar</a>
+                    </div>
+                    <div>
+                        <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a>
+                    </div>
                 </td>
             </tr>
         {% endfor %}

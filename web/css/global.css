@@ -26,8 +26,30 @@ input {
     background-color: azure;
 }
 
-table,
-tr,
-td {
+table{
     padding: 5px;
+}
+
+th {
+    text-align: center;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+td {
+    min-width: 115px;
+    max-width: 250px;
+    overflow-x: hidden;
+    border-left: 1px solid #dee2e6;
+    border-right: 1px solid #dee2e6;
+}
+
+a,
+a:link{
+    color: #5B1CDD;
+    
+}
+a:hover{
+    color: #493A89;
+    
 }

@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Tasca</h1>
 
-    <table>
+    <table class="table table-striped">
         <tbody>
             <tr>
                 <th>Idtasca</th>
@@ -40,17 +40,15 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
+        <div>
             <a href="{{ path('tasques_index') }}">Tornar a la llista</a>
-        </li>
-        <li>
+        </div>
+        <div>
             <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Editar</a>
-        </li>
-        <li>
+        </div>
+        <div>
             {{ form_start(delete_form) }}
                 <input type="submit" value="Eliminar">
             {{ form_end(delete_form) }}
-        </li>
-    </ul>
+        </div>
 {% endblock %}

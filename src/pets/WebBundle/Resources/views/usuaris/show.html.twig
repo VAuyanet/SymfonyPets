@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Usuari</h1>
 
-    <table>
+    <table class="table table-striped">
         <tbody>
             <tr>
                 <th>Idusuari</th>
@@ -36,17 +36,11 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('usuaris_index') }}">Tornar a la llista</a>
-        </li>
-        <li>
-            <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a>
-        </li>
-        <li>
-            {{ form_start(delete_form) }}
-                <input type="submit" value="Eliminar">
-            {{ form_end(delete_form) }}
-        </li>
-    </ul>
+    <div><a href="{{ path('usuaris_index') }}">Tornar a la llista</a></div>
+    <div><a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a></div>
+    <div>
+        {{ form_start(delete_form) }}
+            <input type="submit" value="Eliminar">
+        {{ form_end(delete_form) }}
+    </div>
 {% endblock %}

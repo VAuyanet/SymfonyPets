@@ -3,7 +3,7 @@
 {% block content %}
     <h1>Tasques</h1>
 
-    <table>
+    <table class="table table-striped">
         <thead>
             <tr>
                 <th>Idtasca</th>
@@ -29,14 +29,12 @@
                 <td>{{ tasque.prioritat }}</td>
                 <td><a href="{{ path('tasques_departament', {'idDepartament': tasque.departament}) }}">{{ tasque.departament }}</a></td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Editar</a>
-                        </li>
-                    </ul>
+                    <div>
+                        <a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">Mostrar</a>
+                    </div>
+                    <div>
+                        <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Editar</a>
+                    </div>
                 </td>
             </tr>
         {% endfor %}

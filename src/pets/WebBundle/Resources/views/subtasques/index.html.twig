@@ -26,17 +26,15 @@
                 <td>{% if subtasque.dataInici %}{{ subtasque.dataInici|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if subtasque.dataFinal %}{{ subtasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ subtasque.prioritat }}</td>
-                <td>{{ subtasque.usuaris }}</td>
+                <td><a href="{{ path('subtasques_usuaris', {'idUsuari': subtasque.usuaris}) }}">{{ subtasque.usuaris }}</a></td>
                 <td>{{ subtasque.idTasca }}</td>
                 <td>
-                    <ul>
-                        <li>
-                            <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">Mostrar</a>
-                        </li>
-                        <li>
-                            <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">Editar</a>
-                        </li>
-                    </ul>
+                    <div>
+                        <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">Mostrar</a>
+                    </div>
+                    <div>
+                        <a href="{{ path('subtasques_edit', { 'idSubtasca': subtasque.idSubtasca }) }}">Editar</a>
+                    </div>
                 </td>
             </tr>
         {% endfor %}
