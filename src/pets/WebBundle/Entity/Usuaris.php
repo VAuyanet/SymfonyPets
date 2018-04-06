@@ -256,5 +256,9 @@ class Usuaris implements UserInterface
     public function eraseCredentials()
     {
     }
+    
+    public function __toString() {
+        return strval($this->idUsuari);
+    }
 
 }

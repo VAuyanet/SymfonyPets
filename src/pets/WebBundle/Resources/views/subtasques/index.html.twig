@@ -12,7 +12,7 @@
                 <th>Datainici</th>
                 <th>Datafinal</th>
                 <th>Prioritat</th>
-                <th>Usuaris</th>
+                <th>Usuari</th>
                 <th>Idtasca</th>
                 <th>Actions</th>
             </tr>
@@ -26,8 +26,8 @@
                 <td>{% if subtasque.dataInici %}{{ subtasque.dataInici|date('Y-m-d') }}{% endif %}</td>
                 <td>{% if subtasque.dataFinal %}{{ subtasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
                 <td>{{ subtasque.prioritat }}</td>
-                <td><a href="{{ path('subtasques_usuaris', {'idUsuari': subtasque.usuaris}) }}">{{ subtasque.usuaris }}</a></td>
-                <td>{{ subtasque.idTasca }}</td>
+                <td><a href="{{ path('subtasques_usuaris', {'idUsuari': subtasque.usuaris}) }}">{{ subtasque.nom }}</a></td>
+                <td>{{ subtasque.titolTasca }}</td>
                 <td>
                     <div>
                         <a href="{{ path('subtasques_show', { 'idSubtasca': subtasque.idSubtasca }) }}">Mostrar</a>
@@ -41,10 +41,8 @@
         </tbody>
     </table>
 
-    <ul>
-        <li>
-            <a href="{{ path('subtasques_new', { 'idTasca': idTasca }) }}">Crear una nova subtasca</a>
+    <div>
+        <a href="{{ path('subtasques_new', { 'idTasca': idTasca }) }}">Crear una nova subtasca</a>
 <!--            <a href="subtasques_new/{#{ idTasca }#}">Crear una nova subtasca</a>-->
-        </li>
-    </ul>
+    </div>
 {% endblock %}

@@ -1,7 +1,6 @@
 <?php
 
 namespace pets\WebBundle\Controller;
-namespace Doctrine\ORM;
 
 use pets\WebBundle\Entity\Tasques;
 use Symfony\Bundle\FrameworkBundle\Controller\Controller;
@@ -20,21 +19,14 @@ class TasquesController extends Controller
     public function indexAction()
     {
         $em = $this->getDoctrine()->getManager();
-        //
-        //        //        $tasques = $em->getRepository('petsWebBundle:Tasques')->findAll();
-        //        $query = $em->createQuery(
-        //        'SELECT t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, t.departament
-        //        FROM petsWebBundle:Tasques t
-        //        INNER JOIN petsWebBundle:Departament d ON d.id_departament = t.departament 
-        //        
-        //        ');
-        //        $tasques = $query->getResult();  
 
-        $q = Doctrine_Query::create()
-            ->select('t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, d.nom')
-            ->from('Tasques t')
-            ->innerJoin('t.Departament d');
-            $tasques = $q->getSqlQuery();
+        //$tasques = $em->getRepository('petsWebBundle:Tasques')->findAll();
+        $query = $em->createQuery(
+            'SELECT t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, t.departament, d.nom as nom
+                FROM petsWebBundle:Tasques t
+               INNER JOIN petsWebBundle:Departament d WITH d.idDepartament = t.departament 
+            ');
+        $tasques = $query->getResult();  
 
         return $this->render('petsWebBundle:tasques:index.html.twig', array(
             'tasques' => $tasques,
@@ -73,8 +65,17 @@ class TasquesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($tasque);
 
+        $em = $this->getDoctrine()->getManager();
+        $query = $em->createQuery(
+            'SELECT t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, t.departament, d.nom as nom
+                FROM petsWebBundle:Tasques t
+               INNER JOIN petsWebBundle:Departament d WITH d.idDepartament = t.departament 
+                           WHERE t.idTasca= '.$tasque->getIdTasca().' 
+            ');
+        $tasques = $query->getResult();
         return $this->render('petsWebBundle:tasques:show.html.twig', array(
             'tasque' => $tasque,
+            'tasques' => $tasques,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -138,22 +139,23 @@ class TasquesController extends Controller
 
     public function llistaTasquesDepartamentAction($idDepartament)
     {
-        $entityManager = $this->getDoctrine()->getManager();
+        $em = $this->getDoctrine()->getManager();
 
         $titol="Llista tasques departament X";
-        $query = $entityManager->createQuery(
-            'SELECT t
-        FROM petsWebBundle:Tasques t
+        $query = $em->createQuery(
+            'SELECT t.idTasca, t.titol, t.descripcio, t.dataInici, t.dataFinal, t.estat, t.prioritat, t.departament, d.nom as nom
+                FROM petsWebBundle:Tasques t
+               INNER JOIN petsWebBundle:Departament d WITH d.idDepartament = t.departament 
         WHERE t.departament= '.$idDepartament.' '
         );
         $tasques = $query->getResult();  
-        $sql = $entityManager->createQuery(
+        $sql = $em->createQuery(
             'SELECT d.nom
         FROM petsWebBundle:Departament d
         WHERE d.idDepartament= '.$idDepartament.' '
         );
         $nomDepartament = $sql->getResult();
 
-        return $this->render('petsWebBundle:tasques:index.html.twig', array( 'titol' => $titol, 'tasques' =>$tasques, 'nomDepartament' => $nomDepartament[0]['nom'] ));
+        return $this->render('petsWebBundle:tasques:llistaTasquesDepartament.html.twig', array( 'titol' => $titol, 'tasques' =>$tasques, 'nomDepartament' => $nomDepartament[0]['nom'] ));
     }
 }

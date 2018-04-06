@@ -31,7 +31,7 @@
             </tr>
             <tr>
                 <th>Departament</th>
-                <td>{{ usuari.departament }}</td>
+                <td>{{ usuaris[0]['nom'] }}</td>
             </tr>
         </tbody>
     </table>
@@ -40,7 +40,7 @@
     <div><a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a></div>
     <div>
         {{ form_start(delete_form) }}
-            <input type="submit" value="Eliminar">
+            <input type="submit" value="Eliminar" class="btn">
         {{ form_end(delete_form) }}
     </div>
 {% endblock %}

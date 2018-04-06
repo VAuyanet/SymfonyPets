@@ -1,0 +1,43 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Usuaris&nbsp;&nbsp;<sub>"{{ nomDepartament }}"</sub></h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Idusuari</th>
+                <th>Nom</th>
+                <th>Cognoms</th>
+                <th>Email</th>
+                <th>Perfil</th>
+                <th>Password</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for usuari in usuaris %}
+            <tr>
+                <td><a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">{{ usuari.idUsuari }}</a></td>
+                <td>{{ usuari.nom }}</td>
+                <td>{{ usuari.cognoms }}</td>
+                <td>{{ usuari.email }}</td>
+                <td>{{ usuari.role }}</td>
+                <td>{{ usuari.password }}</td>
+                <td>
+                    <div>
+                        <a href="{{ path('usuaris_show', { 'idUsuari': usuari.idUsuari }) }}">Mostrar</a>
+                    </div>
+                    <div>
+                        <a href="{{ path('usuaris_edit', { 'idUsuari': usuari.idUsuari }) }}">Editar</a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div>
+        <a href="{{ path('usuaris_new') }}">Crear un nou usuari</a>
+    </div>
+{% endblock %}

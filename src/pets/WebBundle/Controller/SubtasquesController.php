@@ -36,8 +36,8 @@ class SubtasquesController extends Controller
         $subtasque = new Subtasques();
         $form = $this->createForm('pets\WebBundle\Form\SubtasquesType', $subtasque);
         $form->handleRequest($request);
-//        var_dump($request);
-//        die();
+        //        var_dump($request);
+        //        die();
         $subtasque->setIdTasca($idTasca);
 
         if ($form->isSubmitted() && $form->isValid()) {
@@ -63,8 +63,19 @@ class SubtasquesController extends Controller
     {
         $deleteForm = $this->createDeleteForm($subtasque);
 
+        $entityManager = $this->getDoctrine()->getManager();
+        $query = $entityManager->createQuery(
+            'SELECT s.idSubtasca, s.titol, s.descripcio, s.dataInici, s.dataFinal, s.prioritat, s.usuaris, s.idTasca, t.titol as titolTasca, u.nom as nom
+            FROM petsWebBundle:Subtasques s
+            INNER JOIN petsWebBundle:Tasques t WITH t.idTasca = s.idTasca 
+            INNER JOIN petsWebBundle:Usuaris u WITH u.idUsuari = s.usuaris
+            WHERE s.idSubtasca= '.$subtasque->getIdSubtasca().' '
+        );
+        $subtasques = $query->getResult(); 
+        
         return $this->render('petsWebBundle:subtasques:show.html.twig', array(
             'subtasque' => $subtasque,
+            'subtasques' => $subtasques,
             'delete_form' => $deleteForm->createView(),
         ));
     }
@@ -132,8 +143,10 @@ class SubtasquesController extends Controller
 
         $titol="Llista subtasques";
         $query = $entityManager->createQuery(
-            'SELECT s
-        FROM petsWebBundle:Subtasques s
+            'SELECT s.idSubtasca, s.titol, s.descripcio, s.dataInici, s.dataFinal, s.prioritat, s.usuaris, s.idTasca, t.titol as titolTasca, u.nom as nom
+            FROM petsWebBundle:Subtasques s
+            INNER JOIN petsWebBundle:Tasques t WITH t.idTasca = s.idTasca 
+            INNER JOIN petsWebBundle:Usuaris u WITH u.idUsuari = s.usuaris
         WHERE s.idTasca= '.$idTasca.' '
         );
         $subtasques = $query->getResult();  
@@ -147,25 +160,26 @@ class SubtasquesController extends Controller
         return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'], 'idTasca' => $idTasca ));
     }
 
-    public function llistaSubtasquesUsuariAction($idTasca)
+    public function llistaSubtasquesUsuariAction($idUsuari)
     {
         $entityManager = $this->getDoctrine()->getManager();
 
         $titol="Llista subtasques";
         $query = $entityManager->createQuery(
-            'SELECT s
+            'SELECT s.idSubtasca, s.titol, s.descripcio, s.dataInici, s.dataFinal, s.prioritat, s.usuaris, s.idTasca, t.titol as titolTasca
         FROM petsWebBundle:Subtasques s
-        WHERE s.idTasca= '.$idTasca.' '
+        INNER JOIN petsWebBundle:Tasques t WITH t.idTasca = s.idTasca 
+        
+        '
         );
         $subtasques = $query->getResult();  
         $sql = $entityManager->createQuery(
-            'SELECT t.titol
-        FROM petsWebBundle:Tasques t
-        WHERE t.idTasca= '.$idTasca.' '
+            'SELECT u.nom
+        FROM petsWebBundle:Usuaris u
+        WHERE u.idUsuari= '.$idUsuari.' '
         );
-        $titolTasca = $sql->getResult();
-        //        print_r($titolTasca); 
-        //        die();
-        return $this->render('petsWebBundle:subtasques:index.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'titolTasca' => $titolTasca[0]['titol'] ));
+        $nomUsuari = $sql->getResult();
+
+        return $this->render('petsWebBundle:subtasques:llistaSubtasquesUsuari.html.twig', array( 'titol' => $titol, 'subtasques' =>$subtasques, 'nomUsuari' => $nomUsuari[0]['nom'] ));
     }
 }

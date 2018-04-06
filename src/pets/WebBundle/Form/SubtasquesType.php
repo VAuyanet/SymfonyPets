@@ -22,14 +22,14 @@ class SubtasquesType extends AbstractType
      */
     public function buildForm(FormBuilderInterface $builder, array $options)
     {
-        //        $builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('Usuaris', EntityType::class, array(
-        //                'class' => 'petsWebBundle:Usuaris',
-        //                'choice_label' => 'nom',
-        //                'multiple' => FALSE,
-        //                'label_attr'=> array('class' => 'labelT'), 
-        //                'attr' => array('class' => 'form-control')
-        //                ))->add('idTasca', HiddenType::class);
-        $builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('Usuaris', TextType::class)->add('idTasca', HiddenType::class);
+        $builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('Usuaris', EntityType::class, array(
+            'class' => 'petsWebBundle:Usuaris',
+            'choice_label' => 'nom',
+            'multiple' => FALSE,
+            'label_attr'=> array('class' => 'labelT'), 
+            'attr' => array('class' => 'form-control')
+        ))->add('idTasca', HiddenType::class);
+        //$builder->add('titol', TextType::class)->add('descripcio', TextareaType::class)->add('dataInici', DateType::class)->add('dataFinal', DateType::class)->add('prioritat', TextType::class)->add('Usuaris', TextType::class)->add('idTasca', HiddenType::class);
     }/**
      * {@inheritdoc}
      */

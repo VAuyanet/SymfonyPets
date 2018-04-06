@@ -1,0 +1,45 @@
+{% extends 'base.html.twig' %}
+
+{% block content %}
+    <h1>Tasques&nbsp;&nbsp;<sub>"{{ nomDepartament }}"</sub></h1>
+
+    <table class="table table-striped">
+        <thead>
+            <tr>
+                <th>Idtasca</th>
+                <th>Titol</th>
+                <th>Descripcio</th>
+                <th>Datainici</th>
+                <th>Datafinal</th>
+                <th>Estat</th>
+                <th>Prioritat</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for tasque in tasques %}
+            <tr>
+                <td><a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">{{ tasque.idTasca }}</a></td>
+                <td><a href="{{ path('subtasques_index', {'idTasca': tasque.idTasca}) }}">{{ tasque.titol}}</a></td>
+                <td>{{ tasque.descripcio }}</td>
+                <td>{% if tasque.dataInici %}{{ tasque.dataInici|date('Y-m-d') }}{% endif %}</td>
+                <td>{% if tasque.dataFinal %}{{ tasque.dataFinal|date('Y-m-d') }}{% endif %}</td>
+                <td>{{ tasque.estat }}</td>
+                <td>{{ tasque.prioritat }}</td>
+                <td>
+                    <div>
+                        <a href="{{ path('tasques_show', { 'idTasca': tasque.idTasca }) }}">Mostrar</a>
+                    </div>
+                    <div>
+                        <a href="{{ path('tasques_edit', { 'idTasca': tasque.idTasca }) }}">Editar</a>
+                    </div>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <div>
+        <a href="{{ path('tasques_new') }}">Crear una nova tasca</a>
+    </div>
+{% endblock %}

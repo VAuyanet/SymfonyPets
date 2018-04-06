@@ -5,12 +5,10 @@
 
     {{ form_start(form) }}
         {{ form_widget(form) }}
-        <input type="submit" value="Crear" />
+        <input type="submit" value="Crear" class="btn"/>
     {{ form_end(form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('usuaris_index') }}">Tornar a la llista</a>
-        </li>
-    </ul>
+
+    <a href="{{ path('usuaris_index') }}">Tornar a la llista</a>
+
 {% endblock %}

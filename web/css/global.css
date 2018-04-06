@@ -1,10 +1,10 @@
 /* GENERIC */
 
-html,
+
 body {
-    height: 100%;
     margin: 0px;
     padding: 0px;
+    min-height: 600px;
 }
 
 /* NAV */
@@ -16,8 +16,21 @@ nav {
 
 /* FORMS */
 
-input {
+input,
+textarea{
     border-radius: 5px;
+}
+
+form input,
+form textarea,
+form select {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    max-width: 200px;
+}
+
+label {
+    margin-right: 5px;
 }
 
 /*TABLES*/
@@ -52,4 +65,23 @@ a:link{
 a:hover{
     color: #493A89;
     
+}
+
+
+/* LOGIN */
+.login {
+    display: block;
+    margin: 50px auto;
+    max-width: 150px;
+    text-align: center;
+}
+
+
+/* FOOTER */
+
+.footer {
+    background-color: #343a40;
+    padding-right: 30px;
+    text-align: right;
+    color: white;
 }

@@ -5,16 +5,15 @@
 
     {{ form_start(edit_form) }}
     {{ form_widget(edit_form) }}
-    <input type="submit" value="Editar subtasca" />
+    <input type="submit" value="Editar subtasca" class="btn" />
     {{ form_end(edit_form) }}
 
-    <ul>
-        <li>
-            <a href="{{ path('subtasques_index', { 'idTasca': subtasque.idTasca }) }}">Tornar a la llista</a>        </li>
-        <li>
-            {{ form_start(delete_form) }}
-            <input type="submit" value="Eliminar subtasca">
-            {{ form_end(delete_form) }}
-        </li>
-</ul>
+    <div>
+        <a href="{{ path('subtasques_index', { 'idTasca': subtasque.idTasca }) }}">Tornar a la llista</a>
+    </div>
+    <div>
+        {{ form_start(delete_form) }}
+        <input type="submit" value="Eliminar subtasca" class="btn">
+        {{ form_end(delete_form) }}
+    </div>
 {% endblock %}

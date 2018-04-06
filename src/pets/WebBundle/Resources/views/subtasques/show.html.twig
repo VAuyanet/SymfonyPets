@@ -31,11 +31,11 @@
             </tr>
             <tr>
                 <th>Usuaris</th>
-                <td>{{ subtasque.usuaris }}</td>
+                <td>{{ subtasques[0]['nom'] }}</td>
             </tr>
             <tr>
                 <th>Idtasca</th>
-                <td>{{ subtasque.idTasca }}</td>
+                <td>{{ subtasques[0]['titolTasca'] }}</td>
             </tr>
         </tbody>
     </table>
@@ -48,7 +48,7 @@
         </div>
         <div>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Eliminar">
+                <input type="submit" value="Eliminar" class="btn">
             {{ form_end(delete_form) }}
         </div>
 {% endblock %}

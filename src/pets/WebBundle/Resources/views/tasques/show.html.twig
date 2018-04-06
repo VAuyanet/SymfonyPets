@@ -35,7 +35,7 @@
             </tr>
             <tr>
                 <th>Departament</th>
-                <td>{{ tasque.departament }}</td>
+                <td>{{ tasques[0]['nom'] }}</td>
             </tr>
         </tbody>
     </table>
@@ -48,7 +48,7 @@
         </div>
         <div>
             {{ form_start(delete_form) }}
-                <input type="submit" value="Eliminar">
+                <input type="submit" value="Eliminar" class="btn">
             {{ form_end(delete_form) }}
         </div>
 {% endblock %}
